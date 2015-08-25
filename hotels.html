@@ -1,45 +1,129 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Барбершоп</title>
-    </head>
-    <body>
-        <header class="main_header">
-            <nav class="main_menu">
-                <ul>
-                    <li ><a href="#">Информация</a></li>
-                    <li><a href="#">Фото и видео</a></li>
-                    <li><a href="#">Карта штата</a></li>
-                    <li class="active"><a href="#">Гостиницы</a></li>               
-                </ul>
-                <div class="logo"><a href="index.html"></a></div> <!-- логотип в меню оформить дивом или img? и вывести за пределы списка и выровнять с помощью absolute?-->
-            </nav>  
-        </header>
-        
-        <main>
-            <div class="main_conteiner">
-                <div class="select"></div>
-                <div class="sort"></div>
+
+<head>
+    <meta charset="utf-8">
+    <title>Седона</title>
+</head>
+
+<body>
+    <header class="main_header">
+        <nav class="main_menu">
+            <ul>
+                <li><a href="#">Информация</a></li>
+                <li><a href="#">Фото и видео</a></li>
+                <li><a href="#">Карта штата</a></li>
+                <li class="active"><a href="#">Гостиницы</a></li>
+            </ul>
+            <div class="logo">
+                <a href="index.html"></a>
             </div>
-        </main>
-        
-        <footer class="main_footer">
-            <div class="container clearfix">
-                <section class="hashteg">
-                    #VISITSEDONA
-                </section>
-                <section class="footer_social">
-                    <a href="#" class="social_btn social_btn_vk">Вконтакте</a>
-                    <a href="#" class="social_btn social_btn_fb">Фейсбук</a>
-                    <a href="#" class="social_btn social_btn_inst">Инстаграм</a>
-                </section>
-                <section class="footer_copyright">
-                    <span>WEBSITE BY:</span>
-                    <a href="http://htmlacademy.ru"></a>
-                </section>
+            <!-- логотип в меню оформить дивом или img? и вывести за пределы списка и выровнять с помощью absolute?-->
+        </nav>
+    </header>
+
+    <main>
+        <div class="main_conteiner">
+            <div class="select">
+                <div class="infrastructure">
+                    <span>Инфраструктура:</span>
+                    <input type="checkbox" id="pool" name="pool" checked> 
+                    <label for="pool">Бассейн</label>
+                    <input type="checkbox" id="parking" name="parking" checked> 
+                    <label for="parking">Парковка</label>
+                    <input type="checkbox" id="wifi" name="wifi" checked> 
+                    <label for="wifi">WI-FI</label>
+                </div>
+                <div class="type_house">
+                    <span>Тип жилья:</span>
+                    <input type="checkbox" id="hotel" name="hotel" checked> 
+                    <label for="hotel">Гостиница</label>
+                    <input type="checkbox" id="motel" name="motel" checked> 
+                    <label for="motel">Мотель</label>
+                    <input type="checkbox" id="apart" name="apart" checked> 
+                    <label for="apart">Апартаменты</label>
+                </div> 
+                <div class="price">
+                    <span>Стоимость в сутки (P):</span>
+                    <div class="range">
+                        <span class="from">ОТ 0</span>
+                        <span class="do">ДО 3000</span>
+                    </div>
+                    <input type="range" min="0" max="10000" step="1">
+                </div>
             </div>
-        </footer>
-    </body>
-    
+            <div class="sort">
+                <h2>Найдено:3</h2>
+                <span class="sorting">Сортировка:</span>
+                <a class="sort_price active" href="#">По цене</a>
+                <a class="sort_type" href="#">По типу</a>
+                <a class="sort_rating" href="#">По рейтингу</a>
+                <a class="sort_bottom" href="#"></a>
+                <a class="sort_top active" href="#"></a>
+            </div>
+            <div class="result">
+                <div class="place">
+                    <img src="#" width="" height="" alt="">
+                    <div class="about">
+                        <h3>Amara Resort & Spa</h3>
+                        <span class="type_house">Гостиница</span>
+                        <span class="price">От 3500 р.</span>
+                        <a class="more" href="#">Подробнее</a>
+                        <button class="reserve">Забронировать</button>
+                    </div>
+                    <div class="rate">
+                        <img class="star" src="#" alt="star">
+                        <span>Рейтинг: 8.5</span>
+                    </div>
+                </div>
+                <div class="place">
+                    <img src="#" width="" height="" alt="">
+                    <div class="about">
+                        <h3>Desert Quail Inn</h3>
+                        <span class="type_house">Мотель</span>
+                        <span class="price">От 2000 р.</span>
+                        <a class="more" href="#">Подробнее</a>
+                        <button class="reserve">Забронировать</button>
+                    </div>
+                    <div class="rate">
+                        <img class="star" src="#" alt="star">
+                        <span>Рейтинг: 8.9</span>
+                    </div>
+                </div>
+                <div class="place">
+                    <img src="#" width="" height="" alt="">
+                    <div class="about">
+                        <h3>Villas At Poco Diablo</h3>
+                        <span class="type_house">Апартаменты</span>
+                        <span class="price">От 4000 р.</span>
+                        <a class="more" href="#">Подробнее</a>
+                        <button class="reserve">Забронировать</button>
+                    </div>
+                    <div class="rate">
+                        <img class="star" src="#" alt="star">
+                        <span>Рейтинг: 9.2</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main_footer">
+        <div class="container clearfix">
+            <section class="hashtag">
+                #VISITSEDONA
+            </section>
+            <section class="footer_social">
+                <a href="#" class="social_btn social_btn_vk">Вконтакте</a>
+                <a href="#" class="social_btn social_btn_fb">Фейсбук</a>
+                <a href="#" class="social_btn social_btn_inst">Инстаграм</a>
+            </section>
+            <section class="footer_copyright">
+                <span>WEBSITE BY:</span>
+                <a href="http://htmlacademy.ru"></a>
+            </section>
+        </div>
+    </footer>
+</body>
+
 </html>
