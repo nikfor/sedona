@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Барбершоп</title>
+    </head>
+    <body>
+        <header class="main_header">
+            <nav class="main_menu">
+                <ul>
+                    <li class="active"><a href="#">Информация</a></li>
+                    <li><a href="#">Фото и видео</a></li>
+                    <li><a href="#">Карта штата</a></li>
+                    <li><a href="#">Гостиницы</a></li>               
+                </ul>
+                <div class="logo"><a href="index.html"></a></div> <!-- логотип в меню оформить дивом или img? и вывести за пределы списка и выровнять с помощью absolute?-->
+            </nav>  
+        </header>
+        
+        <main>
+            <div class="main_conteiner">
+                <div class="top_promo">
+                    <span class="welcome">
+                        welcome
+                    </span>
+                    <span class="gorgeous">
+                        to the gorgeous
+                    </span>
+                    <h1>SEDONA</h1>
+                    <span class="because">"Because the Grand Canyon sucks!"</span>  
+                    <div class="shape"></div>
+                    <div class="about"><span>Седона - небольшой городок в аризоне, заслужтвающий большего!</span></div>
+                </div>
+                
+                <div class="first_line">
+                    <div class="reason first_reason">
+                        <span class="title">Настоящий городок</span>
+                        <span class="number">-№1-</span>
+                        <span class="text">Седона - не аттракцион для туристов, там течет своя жизнь</span>
+                    </div>
+                    <div class="reason_img"><img src="http://placehold.it/800x256" width="800" height="256" alt="Настоящий городок"></div>
+                </div>
+                <div class="second_line">
+                    <div class="hous_block">
+                        <span class="symbol"></span>
+                        <span class="title">Жилье</span>
+                        <span class="text">Рекомендуем пожить в настоящем мотеле, все как в кино!</span>
+                    </div>
+                    <div class="food_block">
+                        <span class="symbol"></span>
+                        <span class="title">Еда</span>
+                        <span class="text">Всегда заказывай фирменный бургер, вы не разочаруетесь!</span>
+                    </div>
+                    <div class="souvenir_block">
+                        <span class="symbol"></span>
+                        <span class="title">Сувениры</span>
+                        <span class="text">Не только китайского, но и местного производства!</span>
+                    </div>
+                </div>
+                <div class="third_line">
+                    <div class="reason_img"><img src="http://placehold.it/800x256" width="800" height="256" alt="Мост дьявола"></div>
+                    <div class="reason second_reason">
+                        <span class="title">Там есть мост дьявола</span>
+                        <span class="number">-№2-</span>
+                        <span class="text">Да, по нему можно пройти! Если конечно вы осмелитесь</span>
+                    </div>
+                </div>
+                <div class="fourth_line">
+                     <div class="reason third_reason">
+                        <span class="title">Небольшая площадь</span>
+                        <span class="number">-№3-</span>
+                        <span class="text">Все достопримечательности находятся очень близко</span>
+                    </div>
+                    <div class="reason fourth_reason">
+                        <span class="title">Красивая дорога</span>
+                        <span class="number">-№4-</span>
+                        <span class="text">Ехать в седону из Лас-Вегаса совсем не скучно!</span>
+                    </div>
+                    <div class="reason fifth_reason">
+                        <span class="title">Мало туристов</span>
+                        <span class="number">-№5-</span>
+                        <span class="text">Большинстов едет в Гранд Каньон и толпится там</span>
+                    </div>
+                </div>
+                <div class="fifth_line">
+                    <h2>Заинтересовались?</h2>
+                    <span>Укажите предполагаемые даты поездки и мы покажем лучшие предложения гостиниц в Седоне</span>
+                </div>
+                <div class="map"></div>
+                <form action="echo" method="post">
+                    <div class="form_title">
+                        <span>Поиск гостиницы в Седоне</span>
+                    </div>
+                    <label>
+                        Дата заезда:
+                        <input type="date" name="date_in" id="date_in" value="24.04.2014">
+                    </label>
+                     <label>
+                        Дата выезда:
+                        <input type="date" name="date_out" id="date_in" value="24.04.2014">
+                    </label>
+                    <label for="count_adult"></label>
+                    <input type="number" id="count_adult" name="count_adult" value="2" min="0" step="1">
+                    <label for="count_kids"></label>
+                    <input type="number" id="count_kids" name="count_kids" value="0" min="0" step="1">                    
+                    <input type="submit" value="НАЙТИ">
+                </form>
+            </div>
+        </main>
+        
+        <footer class="main_footer">
+            <div class="container clearfix">
+                <section class="hashteg">
+                    #VISITSEDONA
+                </section>
+                <section class="footer_social">
+                    <a href="#" class="social_btn social_btn_vk">Вконтакте</a>
+                    <a href="#" class="social_btn social_btn_fb">Фейсбук</a>
+                    <a href="#" class="social_btn social_btn_inst">Инстаграм</a>
+                </section>
+                <section class="footer_copyright">
+                    <span>WEBSITE BY:</span>
+                    <a href="http://htmlacademy.ru"></a>
+                </section>
+            </div>
+        </footer>
+    </body>
+    
+</html>
