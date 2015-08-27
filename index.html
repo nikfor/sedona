@@ -10,10 +10,10 @@
                 <ul>
                     <li class="active"><a href="#">Информация</a></li>
                     <li><a href="#">Фото и видео</a></li>
+                    <li><a href="index.html"><img src="#" alt="логотип"></a></li>
                     <li><a href="#">Карта штата</a></li>
                     <li><a href="#">Гостиницы</a></li>               
                 </ul>
-                <div class="logo"><a href="index.html"></a></div> <!-- логотип в меню оформить дивом или img? и вывести за пределы списка и выравнять с помощью absolute? В ТЗ указано, что логотип - это ссылка на главную страницу. Значит оформляем с помощью <a><img></a>. И вывести за пределы списка, выровнять с помощью absolute -->
             </nav>
         </header>
         
@@ -21,78 +21,72 @@
             <div class="main_container">
                 <div class="top_promo">
                     <!-- Хороший дизайнер эти заголовки сделал бы шрифтом, тк он важен для индексации (в нашем макете - это картинки). Предлагаю не париться со вставкой каждой надписи отдельной картинкой, а склеить её в одну. Иногда очень полезно ползать по слоям в макете и смотреть не только визуально на макет вцелом, но и по слоям. Тогда бы ты точно увидел, что это не надписи, а картинки)-->
-                    <span class="welcome">
-                        welcome
-                    </span>
-                    <span class="gorgeous">
-                        to the gorgeous
-                    </span>
-                    <h1>SEDONA</h1>
-                    <span class="because">"Because the Grand Canyon sucks!"</span>  
-                    <div class="shape"></div>
+                    <img class="promo_img" src="http://placehold.it/1200x773" width="1200" height="773" alt="SEDONA">
                     <!--Давай так: дивы только для построения сетки. <p> - для абзацов текста и <span> для маленьких подписей. И есть еще иерархия <h> по значимости.  Пересмотри используемые теги на всех страницах в соответствии с такими принципами. Семантичные теги вообще пока не берем. Вычисти все section и article во всех страницах. Ниже, например, точно заголовок -->
-                    <div class="about"><span>Седона - небольшой городок в аризоне, заслужтвающий большего!</span></div>
+                    <h1>Седона — небольшой городок в АРИЗОНЕ, заслуживающий большего!</h1>
+                    <p>Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
                 </div>
                 
-                <div class="first_line">
-                    <div class="reason first_reason">
-                        <span class="title">Настоящий городок</span>
+                <div class="container">
+                    <div class="reason">
+                        <h3>Настоящий городок</h3>
                         <span class="number">-№1-</span>
-                        <span class="text">Седона - не аттракцион для туристов, там течет своя жизнь</span>
+                        <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
                     </div>
-                    <div class="reason_img"><img src="http://placehold.it/800x256" width="800" height="256" alt="Настоящий городок"></div>
+                    <img src="http://placehold.it/800x256" width="800" height="256" alt="Настоящий городок">
                 </div>
-                <div class="second_line">
-                    <div class="hous_block">
-                        <span class="symbol"></span>
-                        <span class="title">Жилье</span>
-                        <span class="text">Рекомендуем пожить в настоящем мотеле, все как в кино!</span>
+                <div class="container">
+                    <div class="preference_block">
+                        <img class="symbol" src="http://placehold.it/75x72" width="75" height="72" alt="Символ">
+                        <h3>Жилье</h3>
+                        <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
                     </div>
-                    <div class="food_block">
-                        <span class="symbol"></span>
-                        <span class="title">Еда</span>
-                        <span class="text">Всегда заказывай фирменный бургер, вы не разочаруетесь!</span>
+                    <div class="preference_block">
+                        <img class="symbol" src="http://placehold.it/75x72" width="75" height="72" alt="Символ">
+                        <h3>Еда</h3>
+                        <p>Всегда заказывай фирменный бургер, вы не разочаруетесь!</p>
                     </div>
-                    <div class="souvenir_block">
-                        <span class="symbol"></span>
-                        <span class="title">Сувениры</span>
-                        <span class="text">Не только китайского, но и местного производства!</span>
+                    <div class="preference_block">
+                        <img class="symbol" src="http://placehold.it/75x72" width="75" height="72" alt="Символ">
+                        <h3>Сувениры</h3>
+                        <p>Не только китайского, но и местного производства!</p>
                     </div>
                 </div>
-                <div class="third_line">
-                    <div class="reason_img"><img src="http://placehold.it/800x256" width="800" height="256" alt="Мост дьявола"></div>
-                    <div class="reason second_reason">
-                        <span class="title">Там есть мост дьявола</span>
+                <div class="container">
+                    <img src="http://placehold.it/800x256" width="800" height="256" alt="Мост дьявола">
+                    <div class="reason">
+                        <h3>Настоящий городок</h3>
                         <span class="number">-№2-</span>
-                        <span class="text">Да, по нему можно пройти! Если конечно вы осмелитесь</span>
+                        <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
                     </div>
                 </div>
-                <div class="fourth_line">
-                     <div class="reason third_reason">
-                        <span class="title">Небольшая площадь</span>
+                <div class="container">
+                     <div class="reason">
+                        <h3>Небольшая площадь</h3>
                         <span class="number">-№3-</span>
-                        <span class="text">Все достопримечательности находятся очень близко</span>
+                        <p>Все достопримечательности находятся очень близко</p>
                     </div>
-                    <div class="reason fourth_reason">
-                        <span class="title">Красивая дорога</span>
+                    <div class="reason">
+                        <h3>Красивая дорога</h3>
                         <span class="number">-№4-</span>
-                        <span class="text">Ехать в седону из Лас-Вегаса совсем не скучно!</span>
+                        <p>Ехать в седону из Лас-Вегаса совсем не скучно!</p>
                     </div>
-                    <div class="reason fifth_reason">
-                        <span class="title">Мало туристов</span>
+                    <div class="reason">
+                        <h3>Мало туристов</h3>
                         <span class="number">-№5-</span>
-                        <span class="text">Большинстов едет в Гранд Каньон и толпится там</span>
+                        <p>Большинство едет в Гранд Каньон и толпится там</p>
                     </div>
                 </div>
-                <div class="fifth_line">
+                <div class="container">
                     <h2>Заинтересовались?</h2>
-                    <span>Укажите предполагаемые даты поездки и мы покажем лучшие предложения гостиниц в Седоне</span>
+                    <p>Укажите предполагаемые даты поездки и мы покажем лучшие предложения гостиниц в Седоне</p>
                 </div>
-                <div class="map"></div>
-                <form action="echo" method="post">
-                    <div class="form_title">
-                        <span>Поиск гостиницы в Седоне</span>
-                    </div>
+                
+                <div class="map">
+                    <img src="http://placehold.it/1200x593" width="1200" height="593" alt="Map">
+                </div>
+                <form action="echo" method="post">        
+                    <h3>Поиск гостиницы в Седоне</h3>
                     <label>
                         Дата заезда:
                         <input type="text" name="date_in" id="date_in" value="24 апреля 2014">
@@ -101,9 +95,9 @@
                         Дата выезда:
                         <input type="text" name="date_out" id="date_out" value="04 июля 2014">
                     </label>
-                    <label for="count_adult"></label>
+                    <label for="count_adult">Взрослые</label>
                     <input type="number" id="count_adult" name="count_adult" value="2" min="0" step="1">
-                    <label for="count_kids"></label>
+                    <label for="count_kids">Дети</label>
                     <input type="number" id="count_kids" name="count_kids" value="0" min="0" step="1">                    
                     <input type="submit" value="НАЙТИ">
                 </form>
