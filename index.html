@@ -3,114 +3,110 @@
     <head>
         <meta charset="utf-8">
         <title>Седона</title>
+        <link href="css/normalize.css" rel="stylesheet" type="text/css">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
     </head>
     <body>
-        <header class="main_header">
-            <nav class="main_menu">
-                <ul>
-                    <li class="active"><a href="#">Информация</a></li>
-                    <li><a href="#">Фото и видео</a></li>
-                    <li><a href="index.html"><img src="#" alt="логотип"></a></li>
-                    <li><a href="#">Карта штата</a></li>
-                    <li><a href="#">Гостиницы</a></li>
-                </ul>
-            </nav>
+        <header class="main_header">            
+                <nav class="main_menu">
+                    <ul>
+                        <li><a class="item_menu item_inf active" href="#">Информация</a></li>
+                        <li><a class="item_menu item_foto" href="#">Фото и видео</a></li>
+                        <li><a class="item_menu" href="index.html"><img class="logo_menu" src="/img/logo-menu-all.png" width="138" height="70" alt="логотип"></a></li>
+                        <li><a class="item_menu item_map" href="#">Карта штата</a></li>
+                        <li><a class="item_menu item_hotels" href="#">Гостиницы</a></li>
+                    </ul>
+                </nav>
         </header>
         
         <main>
             <div class="main_container">
-                <div class="top_promo">
-                    <img class="promo_img" src="http://placehold.it/1200x773" width="1200" height="773" alt="SEDONA">
-                    <h1>Седона — небольшой городок в АРИЗОНЕ, заслуживающий большего!</h1>
-                    <p>Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
-                </div>
-                <div class="container">
-                    <div class="reason">
-                        <h3>Настоящий городок</h3>
-                        <span class="number">-№1-</span>
-                        <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
+                <img class="promo_img" src="/img/promo-all.jpg" width="1200" height="724" alt="SEDONA">
+                   <!-- <h1>Седона — небольшой городок в АРИЗОНЕ, заслуживающий большего!</h1>
+                    <p>Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p> -->
+                <div class="container clearfix">
+                    <div class="reason blue">
+                        <h3>Настоящий<br> городок</h3>
+                        <span class="number">— №1 —</span>
+                        <p>Седона не атракцион для туристов,<br> там течет своя жизнь</p>
                     </div>
-                    <img src="http://placehold.it/800x256" width="800" height="256" alt="Настоящий городок">
+                    <img class="img_reason" src="/img/first-reason.jpg" width="800" height="256" alt="Настоящий городок">
                 </div>
-                <div class="container">
+                <div class="container_preference clearfix">
                     <div class="preference_block">
-                        <img class="symbol" src="http://placehold.it/75x72" width="75" height="72" alt="Символ">
+                        <img class="symbol" src="/img/home.png" width="75" height="72" alt="Символ">
                         <h3>Жилье</h3>
-                        <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+                        <p>Рекомендуем пожить в настоящем<br> мотеле, все как в кино!</p>
                     </div>
                     <div class="preference_block">
-                        <img class="symbol" src="http://placehold.it/75x72" width="75" height="72" alt="Символ">
+                        <img class="symbol" src="/img/burger.png" width="75" height="72" alt="Символ">
                         <h3>Еда</h3>
-                        <p>Всегда заказывай фирменный бургер, вы не разочаруетесь!</p>
+                        <p>Всегда заказывай фирменный бургер,<br> вы не разочаруетесь!</p>
                     </div>
                     <div class="preference_block">
-                        <img class="symbol" src="http://placehold.it/75x72" width="75" height="72" alt="Символ">
+                        <img class="symbol" src="/img/present.png" width="64" height="76" alt="Символ">
                         <h3>Сувениры</h3>
-                        <p>Не только китайского, но и местного производства!</p>
+                        <p>Не только китайского,<br> но и местного производства!</p>
                     </div>
                 </div>
-                <div class="container">
-                    <img src="http://placehold.it/800x256" width="800" height="256" alt="Мост дьявола">
-                    <div class="reason">
-                        <h3>Настоящий городок</h3>
-                        <span class="number">-№2-</span>
-                        <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+                <div class="container clearfix">
+                    <img class="img_reason" src="/img/bridge.jpg" width="800" height="256" alt="Мост дьявола">
+                    <div class="reason blue">
+                        <h3>Там есть<br>мост дьявола</h3>
+                        <span class="number">— №2 —</span>
+                        <p>Да, по нему можно пройти!<br> Если конечно вы осмелитесь</p>
                     </div>
                 </div>
-                <div class="container">
-                     <div class="reason">
-                        <h3>Небольшая площадь</h3>
-                        <span class="number">-№3-</span>
-                        <p>Все достопримечательности находятся очень близко</p>
+                <div class="container clearfix">
+                     <div class="reason gray">
+                        <h3>Небольшая<br>площадь</h3>
+                        <span class="number">— №3 —</span>
+                        <p>Все достопримеча-<br>тельности находятся очень близко</p>
                     </div>
-                    <div class="reason">
-                        <h3>Красивая дорога</h3>
-                        <span class="number">-№4-</span>
-                        <p>Ехать в седону из Лас-Вегаса совсем не скучно!</p>
+                    <div class="reason gray">
+                        <h3>Красивая<br>дорога</h3>
+                        <span class="number">— №4 —</span>
+                        <p>Ехать в седону из Лас-Вегаса совсем<br>не скучно!</p>
                     </div>
-                    <div class="reason">
-                        <h3>Мало туристов</h3>
-                        <span class="number">-№5-</span>
-                        <p>Большинство едет в Гранд Каньон и толпится там</p>
+                    <div class="reason gray">
+                        <h3>Мало<br>туристов</h3>
+                        <span class="number">— №5 —</span>
+                        <p>Большинство едет в Гранд Каньон и<br> толпится там</p>
                     </div>
                 </div>
-                <div class="container">
+                <div class="container_ask">
                     <h2>Заинтересовались?</h2>
-                    <p>Укажите предполагаемые даты поездки и мы покажем лучшие предложения гостиниц в Седоне</p>
+                    <p>Укажите предполагаемые даты поездки<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p> 
                 </div>
+                <img class="map_img" src="/img/map.jpg" width="1200" height="593" alt="Map"><!--вот у того элемента сделаю маржин верхний отрицательным-->
                 
-                <div class="map">
-                    <img src="http://placehold.it/1200x593" width="1200" height="593" alt="Map">
-                </div>
-                <form action="echo" method="post">
-                <!--Забегая чуть вперед. Тебе не хватит такой разметки для стилизации формы. Попробуй посмотреть на форму также как на страницу вцелом и добавить ей сетку-->
-                    <h3>Поиск гостиницы в Седоне</h3>
-                    <label>
-                        Дата заезда:
+                <form class="search_form" action="echo" method="post">
+                    <h3 class="title_form">Поиск гостиницы в Седоне</h3>
+                    <div class="container_form">
+                        <label for="date_in">Дата заезда:</label>
                         <input type="text" name="date_in" id="date_in" value="24 апреля 2014">
-                    </label>
-                     <label>
-                        Дата выезда:
-                        <input type="text" name="date_out" id="date_out" value="04 июля 2014">
-                    </label>
-                    <label for="count_adult">Взрослые</label>
-                    <input type="number" id="count_adult" name="count_adult" value="2" min="0" step="1">
-                    <label for="count_kids">Дети</label>
-                    <input type="number" id="count_kids" name="count_kids" value="0" min="0" step="1">
-                    <input type="submit" value="НАЙТИ">
+                        <label for="date_out">Дата выезда:</label>
+                        <input type="text" name="date_out" id="date_out" value="4 июля 2014">
+                        <label for="count_adult">Взрослые</label>
+                        <input type="number" id="count_adult" name="count_adult" value="2" min="0" step="1">
+                        <label for="count_kids">Дети</label>
+                        <input type="number" id="count_kids" name="count_kids" value="0" min="0" step="1">
+                        <input type="submit" value="НАЙТИ">
+                    </div>
                 </form>
             </div>
         </main>
         
         <footer class="main_footer">
-            <div class="container clearfix">
+            <div class="container_footer clearfix">
                 <div class="hashtag">
-                    #VISITSEDONA
+                    <span>#VISITSEDONA</span>
                 </div>
-                <div class="footer_social">
-                    <a href="#" class="social_btn social_btn_vk">Вконтакте</a>
-                    <a href="#" class="social_btn social_btn_fb">Фейсбук</a>
-                    <a href="#" class="social_btn social_btn_inst">Инстаграм</a>
+                <div class="footer_social clearfix">
+                    <a href="#" class="social_btn social_btn_tw"></a>
+                    <a href="#" class="social_btn social_btn_fb"></a>
+                    <a href="#" class="social_btn social_btn_youtube"></a>
                 </div>
                 <div class="footer_copyright">
                     <span>WEBSITE BY:</span>
