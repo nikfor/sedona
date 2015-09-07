@@ -8,7 +8,8 @@
         <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
     </head>
     <body>
-        <header class="main_header">            
+        <!--Для тени, которая требуется по ТЗ, мы просто обернём весь сайт в контейнер типа div class="shadow" и зададим ему нужную тень. Более изящного решения мы еще со студентами не нашли:) Делись, если есть другие идеи-->
+        <header class="main_header">
                 <nav class="main_menu">
                     <ul>
                         <li><a class="item_menu item_inf active" href="#">Информация</a></li>
@@ -23,6 +24,7 @@
         <main>
             <div class="main_container">
                 <img class="promo_img" src="/img/promo-all.jpg" width="1200" height="724" alt="SEDONA">
+                <!--Что не так с заголовком и подзаголовком? Зачем ты его спрятал?-->
                    <!-- <h1>Седона — небольшой городок в АРИЗОНЕ, заслуживающий большего!</h1>
                     <p>Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p> -->
                 <div class="container clearfix">
@@ -80,7 +82,7 @@
                     <p>Укажите предполагаемые даты поездки<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p> 
                 </div>
                 <img class="map_img" src="/img/map.jpg" width="1200" height="593" alt="Map"><!--вот у того элемента сделаю маржин верхний отрицательным-->
-                
+                <!--Не нужно. Карта будет интерактивной. Как её подключить будем разбирать в конце интенсива, в вебинаре по JS. А пока это некий div class="map", у которого изображение карты задано с помощью background-image-->
                 <form class="search_form" action="echo" method="post">
                     <h3 class="title_form">Поиск гостиницы в Седоне</h3>
                     <div class="container_form">
