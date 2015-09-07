@@ -425,3 +425,77 @@ h3{
 }
 
 
+/*                      -------------Sedona hotels-------------                    */
+
+.select_form{
+    min-height: 196px;
+    background-image: url("/img/filter_background.jpg");
+    background-position: 0 -56px;
+    margin-top: 0px;
+    padding-top: 21px;
+    background-color: #6c92b9;
+}
+
+.select_infrastr{
+    float: left;
+    margin-left: 71px;
+    width: 155px;
+    padding-top: 6px;
+    min-height: 160px;
+    color: white;
+}
+
+.select_infrastr label{
+    display: block;
+    margin-left: 40px;
+    margin-top: 25px;
+    line-height: 21px;
+    cursor: pointer;
+}
+
+.select_house{
+    float: left;
+    margin-left: 100px;
+    width: 155px;
+    padding-top: 6px;
+    min-height: 160px;
+    color: white;
+}
+
+.select_house label{
+    display: block;
+    margin-left: 42px;
+    margin-top: 25px;
+    line-height: 21px;
+    cursor: pointer;
+}
+
+.select_price{
+    float: right;
+    margin-right: 45px;
+    width: 355px;
+    padding-top: 6px;
+    min-height: 160px;
+}
+
+.select_form h4{
+    margin-top: 0px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 21px;
+    
+}
+
+.select_form input[type="checkbox"]{
+    display: none;
+}
+ 
+
+
+
+
+
+
+
+

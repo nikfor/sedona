@@ -1,64 +1,65 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <title>Седона</title>
-</head>
-
-<body>
-    <header class="main_header">
-            <nav class="main_menu">
-                <ul>
-                    <li class="active"><a href="#">Информация</a></li>
-                    <li><a href="#">Фото и видео</a></li>
-                    <li><a href="index.html"><img src="/img/logo-menu-all.png" alt="логотип"></a></li>
-                    <li><a href="#">Карта штата</a></li>
-                    <li><a href="#">Гостиницы</a></li>
-                </ul>
-            </nav>
+    <head>
+        <meta charset="utf-8">
+        <title>Седона</title>
+        <link href="css/normalize.css" rel="stylesheet" type="text/css">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <header class="main_header">            
+                <nav class="main_menu">
+                    <ul>
+                        <li><a class="item_menu item_inf active" href="#">Информация</a></li>
+                        <li><a class="item_menu item_foto" href="#">Фото и видео</a></li>
+                        <li><a class="item_menu" href="index.html"><img class="logo_menu" src="/img/logo-menu-all.png" width="138" height="70" alt="логотип"></a></li>
+                        <li><a class="item_menu item_map" href="#">Карта штата</a></li>
+                        <li><a class="item_menu item_hotels" href="#">Гостиницы</a></li>
+                    </ul>
+                </nav>
         </header>
 
-    <main>
-        <div class="main_container">
-            <form form action="echo" method="post">
-                <div class="infrastructure">
-                    <h3>Инфраструктура:</h3>
-                    <input type="checkbox" id="pool" name="pool" checked> 
-                    <label for="pool">Бассейн</label>
-                    <input type="checkbox" id="parking" name="parking"> 
-                    <label for="parking">Парковка</label>
-                    <input type="checkbox" id="wifi" name="wifi"> 
-                    <label for="wifi">WI-FI</label>
-                </div>
-                <div class="type_house">
-                    <h3>Тип жилья:</h3>
-                    <input type="checkbox" id="hotel" name="hotel" checked> 
-                    <label for="hotel">Гостиница</label>
-                    <input type="checkbox" id="motel" name="motel" checked> 
-                    <label for="motel">Мотель</label>
-                    <input type="checkbox" id="apart" name="apart" checked> 
-                    <label for="apart">Апартаменты</label>
-                </div> 
-                <div class="price">
-                    <h3>Стоимость в сутки (P):</h3>
-                    <div class="range">
-                        <span class="from">ОТ 0</span>
-                        <span class="do">ДО 3000</span>
+        <main>
+            <div class="main_container">
+                <form class="select_form" action="echo" method="post">
+                    <div class="select_infrastr">
+                        <h4>Инфраструктура:</h4>
+                        <input type="checkbox" id="pool" name="pool" checked> 
+                        <label for="pool">Бассейн</label>
+                        <input type="checkbox" id="parking" name="parking"> 
+                        <label for="parking">Парковка</label>
+                        <input type="checkbox" id="wifi" name="wifi"> 
+                        <label for="wifi">WI-FI</label>
                     </div>
-                    <input type="range" min="0" max="10000" step="1">
-                </div>
-            </form>
+                    <div class="select_house">
+                        <h4>Тип жилья:</h4>
+                        <input type="checkbox" id="hotel" name="hotel" checked> 
+                        <label for="hotel">Гостиница</label>
+                        <input type="checkbox" id="motel" name="motel" checked> 
+                        <label for="motel">Мотель</label>
+                        <input type="checkbox" id="apart" name="apart" checked> 
+                        <label for="apart">Апартаменты</label>
+                    </div> 
+                    <div class="select_price">
+                        <h4>Стоимость в сутки (P):</h4>
+                        <div class="range">
+                            <span class="from">ОТ 0</span>
+                            <span class="do">ДО 3000</span>
+                        </div>
+                        <input type="range" min="0" max="10000" step="1">
+                    </div>
+                </form>
             
-            <div class="container_sort">
-                <h2>Найдено:3</h2>
-                <span class="sorting">Сортировка:</span>
-                <a class="sort_price active" href="#">По цене</a>
-                <a class="sort_type" href="#">По типу</a>
-                <a class="sort_rating" href="#">По рейтингу</a>
-                <a class="sort_bottom" href="#"></a>
-                <a class="sort_top active" href="#"></a>
-            </div>
+                <div class="container_sort">
+                    <h2>Найдено:3</h2>
+                    <span class="sorting">Сортировка:</span>
+                    <a class="sort_price active" href="#">По цене</a>
+                    <a class="sort_type" href="#">По типу</a>
+                    <a class="sort_rating" href="#">По рейтингу</a>
+                    <a class="sort_bottom" href="#"></a>
+                    <a class="sort_top active" href="#"></a>
+                </div>
             <div class="result">
                 <div class="container">
                     <img src="/img/amara-resort.jpg" width="135" height="90" alt="amara resort">
@@ -107,18 +108,18 @@
     </main>
 
     <footer class="main_footer">
-            <div class="container clearfix">
+            <div class="container_footer clearfix">
                 <div class="hashtag">
-                    #VISITSEDONA
+                    <span>#VISITSEDONA</span>
                 </div>
-                <div class="footer_social">
-                    <a href="#" class="social_btn social_btn_tw"><img src="img/twitterr.png" width="17" height="15" alt="Twitter"></a>
-                    <a href="#" class="social_btn social_btn_fb"><img src="img/fb.png" width="17" height="15" alt="Facebook"></a>
-                    <a href="#" class="social_btn social_btn_youtube"><img src="img/play.png" width="17" height="15" alt="Youtube"></a>
+                <div class="footer_social clearfix">
+                    <a href="#" class="social_btn social_btn_tw"></a>
+                    <a href="#" class="social_btn social_btn_fb"></a>
+                    <a href="#" class="social_btn social_btn_youtube"></a>
                 </div>
                 <div class="footer_copyright">
                     <span>WEBSITE BY:</span>
-                    <a href="http://htmlacademy.ru"><img src="img/htmlacademy.png" width="113" height="39" alt="Twitter"></a>
+                    <a href="http://htmlacademy.ru"></a>
                 </div>
             </div>
         </footer>
