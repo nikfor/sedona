@@ -1,3 +1,71 @@
+@font-face {
+  font-family: 'symbols-sedona';
+  src: url('../font/symbols-sedona.eot?60737633');
+  src: url('../font/symbols-sedona.eot?60737633#iefix') format('embedded-opentype'),
+       url('../font/symbols-sedona.woff?60737633') format('woff'),
+       url('../font/symbols-sedona.ttf?60737633') format('truetype'),
+       url('../font/symbols-sedona.svg?60737633#symbols-sedona') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'symbols-sedona';
+    src: url('../font/symbols-sedona.svg?60737633#symbols-sedona') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "symbols-sedona";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-facebook:before { content: '\66'; } /* 'f' */
+.icon-twitter:before { content: '\74'; } /* 't' */
+.icon-up-dir:before { content: '\25b2'; } /* '▲' */
+.icon-down-dir:before { content: '\25bc'; } /* '▼' */
+.icon-star:before { content: '\2605'; } /* '★' */
+.icon-check-off:before { content: '\2610'; } /* '☐' */
+.icon-check-on:before { content: '\2611'; } /* '☑' */
+.icon-calendar:before { content: '\e800'; } /* '' */
+.icon-plus:before { content: '\e801'; } /* '' */
+.icon-minus:before { content: '\e802'; } /* '' */
+.icon-youtube:before { content: '\f39e'; } /* '' */
+
+
+
+
+
 body{
     font-family: "PT Sans", sans-serif;
     font-size: 14px;
@@ -7,7 +75,6 @@ body{
     text-transform: uppercase;
     position: relative;
     min-width: 1200px;
-    box-shadow: 5px 5px 15px 10px rgba(0,1,1, 0.9);
 }
 
 h3{
@@ -16,10 +83,12 @@ h3{
     font-weight: bold;
     line-height: 25px;
     text-transform: uppercase;
-    
 }
 
-
+.main_shadow{
+    box-shadow: 0 5px 15px 10px rgba(0,1,1, 0.9);
+    
+}
 .clearfix::after{
     content: '';
     display: table;
@@ -100,8 +169,43 @@ h3{
     position: relative;
 }
 
-.promo_img{
-    margin-bottom: -4px;
+.index_top_promo{
+    width: 1200px;
+    min-height: 724px;
+    margin: 0;
+    padding: 0;
+}
+
+.index_top_img{
+    width: 1200px;
+    min-height: 508px;
+    background: url("../img/Shape%201%20copy%203.png") 0 451px no-repeat, 
+                #8bbeda url("../img/index-main-img.jpg") 0 -56px no-repeat;
+}
+
+.index_promo_container{
+    text-align: center;
+    min-height: 156px;
+    background-color: white;
+}
+
+.index_promo_container h1{
+    font-family: "PT Sans", sans-serif;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 25px;
+    text-transform: uppercase;
+    color:black;
+    margin: 0;
+    margin-top: 60px;
+    margin-bottom: 34px;
+    padding: 0;
+}
+
+.index_promo_container p{
+    margin: 0;
+    padding: 0; 
+    color:black;
 }
 
 .container{
@@ -217,7 +321,7 @@ h3{
     margin-bottom: 54px;
 }
 
-.search_form input[type="text"]{
+.search_form input[name="date_in"], [name="date_out"]{
     font-size: 14px;
     line-height: 26px;
     color: black;
@@ -230,7 +334,7 @@ h3{
     width: 332px;
     min-height: 38px;
     
-    background-image: url("/img/sprites-2.png");
+    background-image: url("../img/sprites-2.png");
     background-repeat: no-repeat;
     background-position: 316px 9px;
     background-color: #f2f2f2;
@@ -238,15 +342,15 @@ h3{
 
 .search_form input[name="date_out"]{
     padding-left: 11px;
-    margin-bottom: 36px;
+    margin-bottom: 29px;
 }
 
-.search_form input[type="text"]:hover{
+.search_form input[name="date_in"]:hover, [name="date_out"]:hover{
     background-color: #ebebeb;
     background-position: -185px 9px;
 }
 
-.search_form input[type="text"]:active{
+.search_form input[name="date_in"]:active, [name="date_out"]:active{
     background-color: white;
     border: 2px solid #e5e5e5;
     width: 330px;
@@ -275,14 +379,11 @@ h3{
     margin-right: 16px;
 }
 
-.search_form label[for="count_adult"]{
-    margin-left: 55px;
-}
 
 .search_form input[type="submit"]{
     width: 458px;
     height: 58px;
-    margin-top: 60px;
+    margin-top: 53px;
     margin-left: 55px;
     
     font-size: 21px;
@@ -301,17 +402,524 @@ h3{
     color: rgba(255, 255, 255, 0.3);
 }
 
-.main_footer{
+
+.search_form label[for="count_adult"]{
+    margin-left: 55px;
+    margin-right: 41px;
+}
+
+input[name="count_adult"]{
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: "PT Sans", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: #f2f2f2;
+    text-align: center; 
+}
+
+.search_form label[for="count_kids"]{
+    margin-left: 53px;
+    margin-right: 27px;
+}
+
+input[name="count_kids"]{
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: "PT Sans", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: #f2f2f2;
+    text-align: center; 
+}
+.count_people{
+    font-size: 0;
+}
+.sign_btn:before{
+    display: inline-block;
+    content: "\e802";
+    vertical-align: top;
+    font-family: "symbols-sedona";
+    font-size: 14px;
+    color:  #a9a9a9;
+    background-color: #f2f2f2;
+    padding: 12px;
+    padding-left: 13px;
+    height: 14px;
+    width: 13px;
+    cursor: pointer;
+}
+
+.plus_adult_btn:before{
+    font-family: "symbols-sedona";
+    content: "\e801";
+}
+
+.plus_kid_btn:before{
+    font-family: "symbols-sedona";
+    content: "\e801";
+}
+
+.sign_btn:hover:before{
+    color: black;
+}
+
+.sign_btn:active:before{
+    color: #81b3d2;
+}
+
+
+
+/*.sign_btn:before{
+    font-family: 'symbols-sedona';
+    background-color: #f2f2f2;
+    content: "\e801";
+    padding: 12px;
+    margin: 0;
+}*/
+
+
+
+
+
+/*                      -------------Sedona hotels-------------                    */
+
+.select_form{
+    min-height: 196px;
+    background-image: url("../img/filter_background.jpg");
+    background-position: 0 -56px;
+    margin-top: 0px;
+    padding-top: 21px;
+    background-color: #6c92b9;
+}
+
+.select_form input[type="checkbox"]{
+    display: none;
+}
+.select_infrastr{
+    float: left;
+    margin-left: 71px;
+    width: 155px;
+    padding-top: 6px;
+    min-height: 160px;
+    color: white;
+}
+
+.select_form input[type="checkbox"] + label{
+    display: inline-block;
+    margin-top: 4px;
+    margin-bottom: 20px;
+    line-height: 21px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+
+.select_form input[type="checkbox"] + label:before{
+    content: '\2610';
+    font-family: 'symbols-sedona'; 
+    display: :inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+    margin-left: 1px;
+    font-size: 24px;
+    color: #b5b5b5;
+}
+
+.select_form input[type="checkbox"]:checked + label:before{
+    content: '\2611';
+    font-family: 'symbols-sedona';
+    font-size: 26px;
+    margin-right: 16px;
+    color: #b5b5b5;
+}
+
+
+.select_form input[type="checkbox"] + label:hover:before{
+    color: #fefefe;
+}
+
+.select_form input[type="checkbox"]:disabled + label:before{
+    color: #6a6a6a;
+}
+
+
+.select_house{
+    float: left;
+    margin-left: 100px;
+    width: 155px;
+    padding-top: 6px;
+    min-height: 160px;
+    color: white;
+}
+
+.select_price{
+    float: right;
+    margin-right: 45px;
+    width: 355px;
+    padding-top: 6px;
+    min-height: 160px;
+}
+
+.select_form h4{
+    margin-top: 0px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 21px;    
+}
+
+.select_price h4{
+    margin-bottom: 10px;
+}
+
+.select_price .range{
+    position: relative;
+    width: 314px;
+    height: 24px;
+    border: 2px #ffffff solid;
+    border-radius: 2px;
+    margin-top: 0;
+    margin-bottom: 7px;
+    margin-left: 10px;
+    padding: 0;
+    padding-top: 8px;
+    color: white;
+}
+
+.range .vertical_line{
     position: absolute;
+    width: 0;
+    height: 20px;
+    border: 1px #ffffff solid;
+    left: 157px;
+    top: 5px;
+}
+
+.range .from{
+    margin-left: 65px;
+}
+
+.range .do{
+    margin-left: 114px;
+}
+
+.range_controls{
+    position: relative;
+    width: 308px;
+    height: 15px;
+    margin-left: 10px;
+    margin-bottom: 19px;
+    padding-top: 13px;
+    padding-left: 10px;
+}
+
+.range_controls .scale{
+    height: 2px;
+    background-color: #ffffff;
+    opacity: 0.3;
+}
+
+.range_controls .bar{
+    height: 2px;
+    background-color: rgb(255, 255, 255); /*не воспринимает белый цвет, любой другой но не белый... что делать?? :)*/
+    opacity: 1;
+    width: 82%;
+}
+
+.range_controls .toggle{
+    position: absolute;
+    top: 4px;
+    width: 4px;
+    height: 4px;
+    border: 8px solid #ffffff;
+    background: #ababab;
+    border-radius: 50%;
+    box-shadow: 0 2px 0 0 rgba(0, 1, 1, 0.14);
+    cursor: pointer;
+}
+
+.range_controls .toggle_min{
+    left: 1px;
+}
+
+.range_controls .toggle_max{
+    left: 253px;
+}
+
+.range_controls .toggle:hover{
+    background-color: #1c4f80;
+}
+
+.select_form input[type="submit"]{
+    height: 36px;
+    width: 137px;
+    background: none;
+    border: 2px #ffffff solid;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 2px;
+    margin-left: 95px;
+    padding-left: 8px;
+}
+
+
+.container_sort{
+    min-height: 56px;
+    border-bottom: 1px solid #e5e5e5;
+    padding-top: 30px;
+}
+
+.container_sort h2{
+    font-family: "PT Sans", sans-serif;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 26px;
+    float: left;
+    margin: 0;
+    margin-left: 72px;
+    margin-right: 47px;
+    
+}
+
+.container_sort .sorting{
+    display: block;
+    float: left;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 18px; 
+    margin-top: 6px;
+    margin-right: 40px;
+}
+
+.container_sort .sort_item{
+    display: block;
+    float: left;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 15px; 
+    margin-top: 7px;
+    text-decoration: none;
+    color: #b1b1b1;
+    margin-right: 33px;
+    border-bottom: 1px dotted #81b3d2
+}
+
+.container_sort .sort_item:hover{
+    color: #81b3d2;
+}
+
+.container_sort .sort_item:active{
+    color: black;
+    border-bottom: none;
+}
+
+.container_sort .active{
+    color: #81b3d2;
+    border-bottom: none;
+}
+
+.container_sort .sort_bottom{
+    display: block;
+    border: 10px solid #cccccc;
+    width: 0;
+    height: 0;
+    border-top: 0;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    transform: scaleX(0.5);
+    float: right;
+    margin-top: 10px;
+    margin-right: 3px;
+}
+
+.container_sort .sort_top{
+    display: block;
+    border: 10px solid #cccccc;
+    width: 0;
+    height: 0;
+    border-bottom: 0;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    transform: scaleX(0.5);
+    float: right;
+    margin-top: 9px;
+    margin-right: 68px;
+}
+
+.container_sort .bt_active{
+    border-top-color: #81b3d2;
+    border-bottom-color: #81b3d2;
+}
+
+.sort_top:hover, .sort_bottom:hover{
+    border-bottom-color: #000000;
+    border-top-color: #000000;
+}
+
+.sort_top:active, .sort_bottom:active{
+    border-bottom-color: #81b3d2;
+    border-top-color: #81b3d2;
+}
+
+.result .container_hotels{
+    min-height: 130px;
+    border-bottom: 1px solid #e5e5e5;
+    padding-top: 20px;
+    padding-left: 72px;
+}
+
+.container_hotels img{
+    float: left;
+    margin-right: 30px;
+    margin-top: 10px;
+}
+
+.about{
+    float: left;
+    padding: 0;
+    
+}
+
+.about h3{
+    font-family: "PT Sans", sans-serif;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 26px;
+    margin: 0;
+    margin-top: 5px;
+    margin-bottom: 9px;
+    cursor: pointer;
+}
+
+.about h3:hover{
+    color: #81b3d2;
+}
+
+.about h3:active{
+    color: #b2b2b2;
+}
+
+.about .type_house{
+    display: inline-block;
+    vertical-align: baseline;
+    width: 112px;
+    
+}
+
+.about .btn_line{
+    margin-top: 15px;
+}
+
+.about .btn{
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    display: block;
+    float: left;
+    margin-right: 6px;
+    height: 22px;
+    padding-top: 6px;
+}
+
+.about  .more_btn{
+    background-color: #81b3d2;
+    width: 110px;
+}
+
+.about  .more_btn:hover{
+    background-color: #669ec0;
+}
+
+.about  .more_btn:active{
+    background-color: #5496bd;
+    color: rgba(255, 255, 255, 0.3);
+    
+}
+
+.about  .reserve_btn{
+    background-color: #766357;
+    width: 143px;
+}
+
+.about  .reserve_btn:hover{
+    background-color: #604e43;
+}
+
+.about  .reserve_btn:active{
+    background-color: #503e33;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.container_hotels .rate{
+    float: right;
+    margin-right: 71px;
+}
+
+.rate .stars{
+    width: 120px;
+    height: 25px;
+    margin-top: 5px;
+    background-image: url("../img/sprites-2.png");
+    background-repeat: no-repeat;
+    margin-bottom: 43px;
+}
+
+.container_hotels:nth-child(1) .stars{
+    background-position: 30px -148px;
+}
+ 
+.container_hotels:nth-child(2) .stars{
+    background-position: -224px -147px;
+}
+
+.container_hotels:nth-child(3) .stars{
+    background-position: -97px -148px;
+}
+
+.rate span{
+    display: block;
+    padding: 0;
+    margin: 0;
+    width: 111px;
+    font-size: 14px;
+    line-height: 21px;
+    color: #666666;
+    background-color: #f2f2f2;
+    text-align: center;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-left: 9px;
+}
+
+
+/*                  -----------------------footer-----------------------                    */
+
+
+
+.main_footer{
+    width: 1200px;
+    background-color: rgba(255, 255, 255, 0.9);
+    min-height: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    /*box-shadow: 0 5px 15px rgba(0,1,1, 0.2);*/
+    
+}
+
+.abs_pos{
+    position: absolute;   
     bottom: 0px;
     left: 50%;
     z-index: 2;
-    width: 1200px;
     margin-left: -600px;
-    background-color: rgba(255, 255, 255, 0.9);
-    min-height: 120px;
-    box-shadow: 0 5px 15px rgba(0,1,1, 0.2);
-    
 }
 
 .hashtag{
@@ -348,7 +956,7 @@ h3{
     float: left;
     margin-right: 6px;
     background-color: #81b3d2;
-    background-image: url("/img/sprites.png");
+    background-image: url("../img/sprites.png");
 }
 
 .social_btn:last-child{
@@ -410,7 +1018,7 @@ h3{
     position: absolute;
     width: 113px;
     min-height: 39px;
-    background-image: url("/img/sprites.png");
+    background-image: url("../img/sprites.png");
     background-position: 0 -352px;
     top: 41px;
     left: 97px;
@@ -425,72 +1033,6 @@ h3{
 }
 
 
-/*                      -------------Sedona hotels-------------                    */
-
-.select_form{
-    min-height: 196px;
-    background-image: url("/img/filter_background.jpg");
-    background-position: 0 -56px;
-    margin-top: 0px;
-    padding-top: 21px;
-    background-color: #6c92b9;
-}
-
-.select_infrastr{
-    float: left;
-    margin-left: 71px;
-    width: 155px;
-    padding-top: 6px;
-    min-height: 160px;
-    color: white;
-}
-
-.select_infrastr label{
-    display: block;
-    margin-left: 40px;
-    margin-top: 25px;
-    line-height: 21px;
-    cursor: pointer;
-}
-
-.select_house{
-    float: left;
-    margin-left: 100px;
-    width: 155px;
-    padding-top: 6px;
-    min-height: 160px;
-    color: white;
-}
-
-.select_house label{
-    display: block;
-    margin-left: 42px;
-    margin-top: 25px;
-    line-height: 21px;
-    cursor: pointer;
-}
-
-.select_price{
-    float: right;
-    margin-right: 45px;
-    width: 355px;
-    padding-top: 6px;
-    min-height: 160px;
-}
-
-.select_form h4{
-    margin-top: 0px;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 21px;
-    
-}
-
-.select_form input[type="checkbox"]{
-    display: none;
-}
- 
 
 
 

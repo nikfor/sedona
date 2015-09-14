@@ -5,117 +5,126 @@
         <title>Седона</title>
         <link href="css/normalize.css" rel="stylesheet" type="text/css">
         <link href="css/style.css" rel="stylesheet" type="text/css">
-        <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <!--Для тени, которая требуется по ТЗ, мы просто обернём весь сайт в контейнер типа div class="shadow" и зададим ему нужную тень. Более изящного решения мы еще со студентами не нашли:) Делись, если есть другие идеи-->
-        <header class="main_header">
-                <nav class="main_menu">
-                    <ul>
-                        <li><a class="item_menu item_inf active" href="#">Информация</a></li>
-                        <li><a class="item_menu item_foto" href="#">Фото и видео</a></li>
-                        <li><a class="item_menu" href="index.html"><img class="logo_menu" src="/img/logo-menu-all.png" width="138" height="70" alt="логотип"></a></li>
-                        <li><a class="item_menu item_map" href="#">Карта штата</a></li>
-                        <li><a class="item_menu item_hotels" href="#">Гостиницы</a></li>
-                    </ul>
-                </nav>
-        </header>
-        
-        <main>
-            <div class="main_container">
-                <img class="promo_img" src="/img/promo-all.jpg" width="1200" height="724" alt="SEDONA">
-                <!--Что не так с заголовком и подзаголовком? Зачем ты его спрятал?-->
-                   <!-- <h1>Седона — небольшой городок в АРИЗОНЕ, заслуживающий большего!</h1>
-                    <p>Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p> -->
-                <div class="container clearfix">
-                    <div class="reason blue">
-                        <h3>Настоящий<br> городок</h3>
-                        <span class="number">— №1 —</span>
-                        <p>Седона не атракцион для туристов,<br> там течет своя жизнь</p>
+        <div class="main_shadow">
+            <header class="main_header">
+                    <nav class="main_menu">
+                        <ul>
+                            <li><a class="item_menu item_inf active" href="index.html">Информация</a></li>
+                            <li><a class="item_menu item_foto" href="#">Фото и видео</a></li>
+                            <li><a class="item_menu" href="index.html"><img class="logo_menu" src="img/logo-menu-all.png" width="138" height="70" alt="логотип"></a></li>
+                            <li><a class="item_menu item_map" href="#">Карта штата</a></li>
+                            <li><a class="item_menu item_hotels" href="hotels.html">Гостиницы</a></li>
+                        </ul>
+                    </nav>
+            </header>
+
+            <main>
+                <div class="main_container">
+                    <div class="index_top_promo" >
+                        <div class="index_top_img"></div>
+                        <div class="index_promo_container">
+                            <h1>Седона — небольшой городок в АРИЗОНЕ,<br> заслуживающий большего!</h1>
+                            <p>Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
+                        </div>
                     </div>
-                    <img class="img_reason" src="/img/first-reason.jpg" width="800" height="256" alt="Настоящий городок">
+                    <div class="container clearfix">
+                        <div class="reason blue">
+                            <h3>Настоящий<br> городок</h3>
+                            <span class="number">— №1 —</span>
+                            <p>Седона не атракцион для туристов,<br> там течет своя жизнь</p>
+                        </div>
+                        <img class="img_reason" src="img/first-reason.jpg" width="800" height="256" alt="Настоящий городок">
+                    </div>
+                    <div class="container_preference clearfix">
+                        <div class="preference_block">
+                            <img class="symbol" src="img/home.png" width="75" height="72" alt="Символ">
+                            <h3>Жилье</h3>
+                            <p>Рекомендуем пожить в настоящем<br> мотеле, все как в кино!</p>
+                        </div>
+                        <div class="preference_block">
+                            <img class="symbol" src="img/burger.png" width="75" height="72" alt="Символ">
+                            <h3>Еда</h3>
+                            <p>Всегда заказывай фирменный бургер,<br> вы не разочаруетесь!</p>
+                        </div>
+                        <div class="preference_block">
+                            <img class="symbol" src="img/present.png" width="64" height="76" alt="Символ">
+                            <h3>Сувениры</h3>
+                            <p>Не только китайского,<br> но и местного производства!</p>
+                        </div>
+                    </div>
+                    <div class="container clearfix">
+                        <img class="img_reason" src="img/bridge.jpg" width="800" height="256" alt="Мост дьявола">
+                        <div class="reason blue">
+                            <h3>Там есть<br>мост дьявола</h3>
+                            <span class="number">— №2 —</span>
+                            <p>Да, по нему можно пройти!<br> Если конечно вы осмелитесь</p>
+                        </div>
+                    </div>
+                    <div class="container clearfix">
+                         <div class="reason gray">
+                            <h3>Небольшая<br>площадь</h3>
+                            <span class="number">— №3 —</span>
+                            <p>Все достопримеча-<br>тельности находятся очень близко</p>
+                        </div>
+                        <div class="reason gray">
+                            <h3>Красивая<br>дорога</h3>
+                            <span class="number">— №4 —</span>
+                            <p>Ехать в седону из Лас-Вегаса совсем<br>не скучно!</p>
+                        </div>
+                        <div class="reason gray">
+                            <h3>Мало<br>туристов</h3>
+                            <span class="number">— №5 —</span>
+                            <p>Большинство едет в Гранд Каньон и<br> толпится там</p>
+                        </div>
+                    </div>
+                    <div class="container_ask">
+                        <h2>Заинтересовались?</h2>
+                        <p>Укажите предполагаемые даты поездки<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p> 
+                    </div>
+                    <img class="map_img" src="img/map.jpg" width="1200" height="593" alt="Map"><!--вот у того элемента сделаю маржин верхний отрицательным-->
+                    <!--Не нужно. Карта будет интерактивной. Как её подключить будем разбирать в конце интенсива, в вебинаре по JS. А пока это некий div class="map", у которого изображение карты задано с помощью background-image-->
+                    <form class="search_form" action="echo" method="post">
+                        <h3 class="title_form">Поиск гостиницы в Седоне</h3>
+                        <div class="container_form">
+                            <label for="date_in">Дата заезда:</label>
+                            <input type="text" name="date_in" id="date_in" value="24 апреля 2014">
+                            <label for="date_out">Дата выезда:</label>
+                            <input type="text" name="date_out" id="date_out" value="4 июля 2014">
+                            <div class="count_people">
+                                <label for="count_adult">Взрослые:</label>
+                                <span class="sign_btn minus_adult_btn"></span>
+                                <input type="text" id="count_adult" name="count_adult" value="2">
+                                <span class="sign_btn plus_adult_btn"></span>
+                                <label for="count_kids">Дети:</label>
+                                <span class="sign_btn minus_kid_btn"></span>
+                                <input type="text" id="count_kids" name="count_kids" value="0">
+                                <span class="sign_btn plus_kid_btn"></span>
+                            </div>
+                            <input type="submit" value="НАЙТИ">
+                        </div>
+                    </form>
                 </div>
-                <div class="container_preference clearfix">
-                    <div class="preference_block">
-                        <img class="symbol" src="/img/home.png" width="75" height="72" alt="Символ">
-                        <h3>Жилье</h3>
-                        <p>Рекомендуем пожить в настоящем<br> мотеле, все как в кино!</p>
+            </main>
+
+            <footer class="main_footer abs_pos">
+                <div class="container_footer clearfix">
+                    <div class="hashtag">
+                        <span>#VISITSEDONA</span>
                     </div>
-                    <div class="preference_block">
-                        <img class="symbol" src="/img/burger.png" width="75" height="72" alt="Символ">
-                        <h3>Еда</h3>
-                        <p>Всегда заказывай фирменный бургер,<br> вы не разочаруетесь!</p>
+                    <div class="footer_social clearfix">
+                        <a href="#" class="social_btn social_btn_tw"></a>
+                        <a href="#" class="social_btn social_btn_fb"></a>
+                        <a href="#" class="social_btn social_btn_youtube"></a>
                     </div>
-                    <div class="preference_block">
-                        <img class="symbol" src="/img/present.png" width="64" height="76" alt="Символ">
-                        <h3>Сувениры</h3>
-                        <p>Не только китайского,<br> но и местного производства!</p>
-                    </div>
-                </div>
-                <div class="container clearfix">
-                    <img class="img_reason" src="/img/bridge.jpg" width="800" height="256" alt="Мост дьявола">
-                    <div class="reason blue">
-                        <h3>Там есть<br>мост дьявола</h3>
-                        <span class="number">— №2 —</span>
-                        <p>Да, по нему можно пройти!<br> Если конечно вы осмелитесь</p>
+                    <div class="footer_copyright">
+                        <span>WEBSITE BY:</span>
+                        <a href="http://htmlacademy.ru"></a>
                     </div>
                 </div>
-                <div class="container clearfix">
-                     <div class="reason gray">
-                        <h3>Небольшая<br>площадь</h3>
-                        <span class="number">— №3 —</span>
-                        <p>Все достопримеча-<br>тельности находятся очень близко</p>
-                    </div>
-                    <div class="reason gray">
-                        <h3>Красивая<br>дорога</h3>
-                        <span class="number">— №4 —</span>
-                        <p>Ехать в седону из Лас-Вегаса совсем<br>не скучно!</p>
-                    </div>
-                    <div class="reason gray">
-                        <h3>Мало<br>туристов</h3>
-                        <span class="number">— №5 —</span>
-                        <p>Большинство едет в Гранд Каньон и<br> толпится там</p>
-                    </div>
-                </div>
-                <div class="container_ask">
-                    <h2>Заинтересовались?</h2>
-                    <p>Укажите предполагаемые даты поездки<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p> 
-                </div>
-                <img class="map_img" src="/img/map.jpg" width="1200" height="593" alt="Map"><!--вот у того элемента сделаю маржин верхний отрицательным-->
-                <!--Не нужно. Карта будет интерактивной. Как её подключить будем разбирать в конце интенсива, в вебинаре по JS. А пока это некий div class="map", у которого изображение карты задано с помощью background-image-->
-                <form class="search_form" action="echo" method="post">
-                    <h3 class="title_form">Поиск гостиницы в Седоне</h3>
-                    <div class="container_form">
-                        <label for="date_in">Дата заезда:</label>
-                        <input type="text" name="date_in" id="date_in" value="24 апреля 2014">
-                        <label for="date_out">Дата выезда:</label>
-                        <input type="text" name="date_out" id="date_out" value="4 июля 2014">
-                        <label for="count_adult">Взрослые</label>
-                        <input type="number" id="count_adult" name="count_adult" value="2" min="0" step="1">
-                        <label for="count_kids">Дети</label>
-                        <input type="number" id="count_kids" name="count_kids" value="0" min="0" step="1">
-                        <input type="submit" value="НАЙТИ">
-                    </div>
-                </form>
-            </div>
-        </main>
-        
-        <footer class="main_footer">
-            <div class="container_footer clearfix">
-                <div class="hashtag">
-                    <span>#VISITSEDONA</span>
-                </div>
-                <div class="footer_social clearfix">
-                    <a href="#" class="social_btn social_btn_tw"></a>
-                    <a href="#" class="social_btn social_btn_fb"></a>
-                    <a href="#" class="social_btn social_btn_youtube"></a>
-                </div>
-                <div class="footer_copyright">
-                    <span>WEBSITE BY:</span>
-                    <a href="http://htmlacademy.ru"></a>
-                </div>
-            </div>
-        </footer>
+            </footer>
+        </div>
     </body>
-    
 </html>

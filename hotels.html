@@ -11,11 +11,11 @@
         <header class="main_header">            
                 <nav class="main_menu">
                     <ul>
-                        <li><a class="item_menu item_inf active" href="#">Информация</a></li>
+                        <li><a class="item_menu item_inf" href="index.html">Информация</a></li>
                         <li><a class="item_menu item_foto" href="#">Фото и видео</a></li>
-                        <li><a class="item_menu" href="index.html"><img class="logo_menu" src="/img/logo-menu-all.png" width="138" height="70" alt="логотип"></a></li>
+                        <li><a class="item_menu" href="index.html"><img class="logo_menu" src="img/logo-menu-all.png" width="138" height="70" alt="логотип"></a></li>
                         <li><a class="item_menu item_map" href="#">Карта штата</a></li>
-                        <li><a class="item_menu item_hotels" href="#">Гостиницы</a></li>
+                        <li><a class="item_menu item_hotels active" href="hotels.html">Гостиницы</a></li>
                     </ul>
                 </nav>
         </header>
@@ -45,62 +45,76 @@
                         <h4>Стоимость в сутки (P):</h4>
                         <div class="range">
                             <span class="from">ОТ 0</span>
+                            <div class="vertical_line"></div>
                             <span class="do">ДО 3000</span>
                         </div>
-                        <input type="range" min="0" max="10000" step="1">
+                        <div class="range_controls">
+                            <div class="scale">
+                                <div class="bar"></div>
+                            </div>
+                            <div class="toggle toggle_min"></div>
+                            <div class="toggle toggle_max"></div>
+                        </div>
+                        <input type="submit" value="Показать">
                     </div>
                 </form>
             
-                <div class="container_sort">
-                    <h2>Найдено:3</h2>
+                <div class="container_sort clearfix">
+                    <h2>Найдено: 3</h2>
                     <span class="sorting">Сортировка:</span>
-                    <a class="sort_price active" href="#">По цене</a>
-                    <a class="sort_type" href="#">По типу</a>
-                    <a class="sort_rating" href="#">По рейтингу</a>
+                    <a class="sort_item by_price active" href="#">По цене</a>
+                    <a class="sort_item by_type" href="#">По типу</a>
+                    <a class="sort_item by_rating" href="#">По рейтингу</a>
+                    <a class="sort_top bt_active" href="#"></a>
                     <a class="sort_bottom" href="#"></a>
-                    <a class="sort_top active" href="#"></a>
                 </div>
             <div class="result">
-                <div class="container">
-                    <img src="/img/amara-resort.jpg" width="135" height="90" alt="amara resort">
+                <div class="container_hotels clearfix">
+                    <img src="img/amara-resort.jpg" width="135" height="90" alt="amara resort">
                     <div class="about">
                         <h3>Amara Resort & Spa</h3>
                         <span class="type_house">Гостиница</span>
                         <span class="price">От 3500 р.</span>
-                        <a class="more_btn" href="#">Подробнее</a>
-                        <a class="reserve_btn" href="#">Забронировать</a>
+                        <div class="btn_line clearfix">
+                            <a class="btn more_btn" href="#">Подробнее</a>
+                            <a class="btn reserve_btn" href="#">Забронировать</a>
+                        </div>
                     </div>
                     <div class="rate">
-                        <img class="star four_star" src="/img/four_stars.png" width="89" height="17" alt="four stars">
-                        <span>Рейтинг: 8.5</span>
+                        <div class="stars"></div>
+                        <span>Рейтинг: 8,5</span>
                     </div>
                 </div>
-                <div class="container">
-                    <img src="/img/desert.jpg" width="135" height="90" alt="desert quail inn">
+                <div class="container_hotels clearfix">
+                    <img src="img/desert.jpg" width="135" height="90" alt="desert quail inn">
                     <div class="about">
                         <h3>Desert Quail Inn</h3>
                         <span class="type_house">Мотель</span>
                         <span class="price">От 2000 р.</span>
-                        <a class="more_btn" href="#">Подробнее</a>
-                        <a class="reserve_btn" href="#">Забронировать</a>
+                        <div class="btn_line clearfix">
+                            <a class="btn more_btn" href="#">Подробнее</a>
+                            <a class="btn reserve_btn" href="#">Забронировать</a>
+                        </div>
                     </div>
                     <div class="rate">
-                        <img class="star two_star" src="/img/two_stars.png" width="42" height="17" alt="two stars">
-                        <span>Рейтинг: 8.9</span>
+                        <div class="stars"></div>
+                        <span>Рейтинг: 8,9</span>
                     </div>
                 </div>
-                <div class="container">
-                    <img src="/img/villas.jpg" width="135" height="90" alt="villas at poco diablo">
+                <div class="container_hotels clearfix">
+                    <img src="img/villas.jpg" width="135" height="90" alt="villas at poco diablo">
                     <div class="about">
                         <h3>Villas At Poco Diablo</h3>
                         <span class="type_house">Апартаменты</span>
                         <span class="price">От 4000 р.</span>
-                        <a class="more_btn" href="#">Подробнее</a>
-                        <a class="reserve_btn" href="#">Забронировать</a>
+                        <div class="btn_line clearfix">
+                            <a class="btn more_btn" href="#">Подробнее</a>
+                            <a class="btn reserve_btn" href="#">Забронировать</a>
+                        </div>
                     </div>
                     <div class="rate">
-                        <img class="star three_star" src="/img/three_stars.png" width="65" height="17" alt="three stars">
-                        <span>Рейтинг: 9.2</span>
+                        <div class="stars"></div>
+                        <span>Рейтинг: 9,2</span>
                     </div>
                 </div>
             </div>
