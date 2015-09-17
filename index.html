@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title>Седона</title>
         <link href="css/normalize.css" rel="stylesheet" type="text/css">
-        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="css/min-style.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet" type="text/css">
     </head>
     <body>
@@ -15,7 +15,7 @@
                             <li><a class="item_menu item_inf active" href="index.html">Информация</a></li>
                             <li><a class="item_menu item_foto" href="#">Фото и видео</a></li>
                             <li><a class="item_menu" href="index.html"><img class="logo_menu" src="img/logo-menu-all.png" width="138" height="70" alt="логотип"></a></li>
-                            <li><a class="item_menu item_map" href="#">Карта штата</a></li>
+                            <li><a class="item_menu item_map" href="#map">Карта штата</a></li>
                             <li><a class="item_menu item_hotels" href="hotels.html">Гостиницы</a></li>
                         </ul>
                     </nav>
@@ -83,11 +83,12 @@
                     <div class="container_ask">
                         <h2>Заинтересовались?</h2>
                         <p>Укажите предполагаемые даты поездки<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p> 
+                        <h3 class="title_form"><a class="btn_form" href="#">Поиск гостиницы в Седоне</a></h3>
                     </div>
-                    <img class="map_img" src="img/map.jpg" width="1200" height="593" alt="Map"><!--вот у того элемента сделаю маржин верхний отрицательным-->
-                    <!--Не нужно. Карта будет интерактивной. Как её подключить будем разбирать в конце интенсива, в вебинаре по JS. А пока это некий div class="map", у которого изображение карты задано с помощью background-image-->
-                    <form class="search_form" action="echo" method="post">
-                        <h3 class="title_form">Поиск гостиницы в Седоне</h3>
+                    <div class="map_block" id="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52381.07628556403!2d-111.76715458122537!3d34.86081855345071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1442355615414" width="1200" height="590" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                    <form class="search_form off_display" action="echo" method="post">
                         <div class="container_form">
                             <label for="date_in">Дата заезда:</label>
                             <input type="text" name="date_in" id="date_in" value="24 апреля 2014">
@@ -126,5 +127,6 @@
                 </div>
             </footer>
         </div>
+        <script src="js/min-form.js"></script>
     </body>
 </html>

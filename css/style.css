@@ -67,7 +67,7 @@
 
 
 body{
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 14px;
     color: black;
     line-height: 17px;
@@ -75,10 +75,11 @@ body{
     text-transform: uppercase;
     position: relative;
     min-width: 1200px;
+    background-color: #f2f2f2;
 }
 
 h3{
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 21px;
     font-weight: bold;
     line-height: 25px;
@@ -86,9 +87,13 @@ h3{
 }
 
 .main_shadow{
-    box-shadow: 0 5px 15px 10px rgba(0,1,1, 0.9);
-    
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 15px -1px rgba(0, 1, 1, 0.3);
+    background-color: #ffffff;    
 }
+
 .clearfix::after{
     content: '';
     display: table;
@@ -179,7 +184,7 @@ h3{
 .index_top_img{
     width: 1200px;
     min-height: 508px;
-    background: url("../img/Shape%201%20copy%203.png") 0 451px no-repeat, 
+    background: url("../img/shape.png") 0 451px no-repeat, 
                 #8bbeda url("../img/index-main-img.jpg") 0 -56px no-repeat;
 }
 
@@ -190,7 +195,7 @@ h3{
 }
 
 .index_promo_container h1{
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 21px;
     font-weight: bold;
     line-height: 25px;
@@ -278,7 +283,7 @@ h3{
 }
 
 .container_ask h2{
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 30px;
     color: black;
     font-weight: bold;
@@ -293,32 +298,79 @@ h3{
     color: #333333;
 }
 
-.map_img{
+.map_block{
     border: 0;
-    margin-top: -14px; /*вот отрицательный маржин у img*/
+    margin-top: 0; /*вот отрицательный маржин у img*/
+    margin-bottom: 0;
+    border: 0;
     padding: 0;
-    margin-bottom: -3px;/*и снизу тоже*/
+    min-height: 593px;
+    background-image: url("../img/map.jpg");
 }
+
+
 .search_form{
     width: 568px;
-    min-height: 481px;
+    min-height: 341px;
     position: absolute;
-    top: 2027px;
+    top: 2113px;
     left: 316px;
-    padding-top: 0;
+    padding-top: 54px;
     background-color: #ffffff;
     text-transform: uppercase;
+    box-shadow: 0 7px 15px 0px rgba(0, 1, 1, 0.15);
+}
+
+.off_display{
+    display: none;
+}
+
+
+.on_display{
+    display: block;
+    animation: on_disp 4s ease-in-out;
+}
+
+@keyframes on_disp{
+    0%{
+        transform: translateX(-900px);  
+    }
+    25%{
+        transform: translateX(90px);
+    }
+    50%{
+        transform: translateX(-40px);
+    }
+    75%{
+        transform: translateX(20px);
+    }
+    90%{
+        transform: translateX(-8px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
     
 }
 
+
 .title_form{
-    margin-top: 0;
+    width: 568px;
     min-height: 56px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 45px;
     text-align: center;
     background-color: #766357;
-    color: white;
+    margin-bottom: 0px;
+}
+
+.title_form a{
     padding-top: 30px;
-    margin-bottom: 54px;
+    display: block;
+    min-height: 56px;
+    text-decoration: none;
+    color: white;
 }
 
 .search_form input[name="date_in"], [name="date_out"]{
@@ -414,7 +466,7 @@ input[name="count_adult"]{
     padding: 0;
     margin: 0;
     border: 0;
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-weight: bold;
     font-size: 14px;
     background-color: #f2f2f2;
@@ -432,7 +484,7 @@ input[name="count_kids"]{
     padding: 0;
     margin: 0;
     border: 0;
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-weight: bold;
     font-size: 14px;
     background-color: #f2f2f2;
@@ -476,16 +528,6 @@ input[name="count_kids"]{
 
 
 
-/*.sign_btn:before{
-    font-family: 'symbols-sedona';
-    background-color: #f2f2f2;
-    content: "\e801";
-    padding: 12px;
-    margin: 0;
-}*/
-
-
-
 
 
 /*                      -------------Sedona hotels-------------                    */
@@ -526,9 +568,9 @@ input[name="count_kids"]{
     font-family: 'symbols-sedona'; 
     display: :inline-block;
     vertical-align: middle;
-    margin-right: 20px;
+    margin-right: 19px;
     margin-left: 1px;
-    font-size: 24px;
+    font-size: 26px;
     color: #b5b5b5;
 }
 
@@ -536,7 +578,7 @@ input[name="count_kids"]{
     content: '\2611';
     font-family: 'symbols-sedona';
     font-size: 26px;
-    margin-right: 16px;
+    margin-right: 15px;
     color: #b5b5b5;
 }
 
@@ -552,7 +594,7 @@ input[name="count_kids"]{
 
 .select_house{
     float: left;
-    margin-left: 100px;
+    margin-left: 101px;
     width: 155px;
     padding-top: 6px;
     min-height: 160px;
@@ -622,13 +664,12 @@ input[name="count_kids"]{
 
 .range_controls .scale{
     height: 2px;
-    background-color: #ffffff;
-    opacity: 0.3;
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 .range_controls .bar{
     height: 2px;
-    background-color: rgb(255, 255, 255); /*не воспринимает белый цвет, любой другой но не белый... что делать?? :)*/
+    background-color: white; 
     opacity: 1;
     width: 82%;
 }
@@ -677,7 +718,7 @@ input[name="count_kids"]{
 }
 
 .container_sort h2{
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 21px;
     font-weight: bold;
     line-height: 26px;
@@ -788,7 +829,7 @@ input[name="count_kids"]{
 }
 
 .about h3{
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 21px;
     font-weight: bold;
     line-height: 26px;
@@ -934,7 +975,7 @@ input[name="count_kids"]{
 
 .hashtag span{
     font-size: 21px;
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-weight: bold;
     line-height: 23px;
     text-transform: uppercase;
@@ -1005,7 +1046,7 @@ input[name="count_kids"]{
     padding-top: 51px;
     padding-left: 16px;
     position: relative;
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 14px;
     color: black;
     line-height: 16px;
