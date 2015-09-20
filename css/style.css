@@ -1,128 +1,103 @@
-@font-face {
-  font-family: 'symbols-sedona';
-  src: url('../font/symbols-sedona.eot?60737633');
-  src: url('../font/symbols-sedona.eot?60737633#iefix') format('embedded-opentype'),
-       url('../font/symbols-sedona.woff?60737633') format('woff'),
-       url('../font/symbols-sedona.ttf?60737633') format('truetype'),
-       url('../font/symbols-sedona.svg?60737633#symbols-sedona') format('svg');
+@font-face{
   font-weight: normal;
   font-style: normal;
-}
-/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
-/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
-/*
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: 'symbols-sedona';
-    src: url('../font/symbols-sedona.svg?60737633#symbols-sedona') format('svg');
-  }
-}
-*/
- 
- [class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "symbols-sedona";
-  font-style: normal;
-  font-weight: normal;
-  speak: none;
- 
-  display: inline-block;
-  text-decoration: inherit;
-  width: 1em;
-  margin-right: .2em;
-  text-align: center;
-  /* opacity: .8; */
- 
-  /* For safety - reset parent styles, that can break glyph codes*/
-  font-variant: normal;
-  text-transform: none;
-     
-  /* fix buttons height, for twitter bootstrap */
-  line-height: 1em;
- 
-  /* Animation center compensation - margins should be symmetric */
-  /* remove if not needed */
-  margin-left: .2em;
- 
-  /* you can be more comfortable with increased icons size */
-  /* font-size: 120%; */
- 
-  /* Uncomment for 3D effect */
-  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  src: url("../font/symbols-sedona.eot?60737633");
+  src: url("../font/symbols-sedona.eot?60737633#iefix") format("embedded-opentype"),
+       url("../font/symbols-sedona.woff?60737633") format("woff"),
+       url("../font/symbols-sedona.ttf?60737633") format("truetype"),
+       url("../font/symbols-sedona.svg?60737633#symbols-sedona") format("svg");
 }
  
-.icon-facebook:before { content: '\66'; } /* 'f' */
-.icon-twitter:before { content: '\74'; } /* 't' */
-.icon-up-dir:before { content: '\25b2'; } /* '▲' */
-.icon-down-dir:before { content: '\25bc'; } /* '▼' */
-.icon-star:before { content: '\2605'; } /* '★' */
-.icon-check-off:before { content: '\2610'; } /* '☐' */
-.icon-check-on:before { content: '\2611'; } /* '☑' */
-.icon-calendar:before { content: '\e800'; } /* '' */
-.icon-plus:before { content: '\e801'; } /* '' */
-.icon-minus:before { content: '\e802'; } /* '' */
-.icon-youtube:before { content: '\f39e'; } /* '' */
+ [class^="icon-"]:before, [class*=" icon-"]:before{
+  display: inline-block;
+  margin-right: .2em;
+  margin-left: .2em;
+  width: 1em;
+  text-align: center;
+  text-decoration: inherit;
+  text-transform: none;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-family: "symbols-sedona";
+  line-height: 1em;
 
-
-
-
+  speak: none;
+}
+ 
+.icon-facebook:before{ content: "\66"; } /* "f" */
+.icon-twitter:before{ content: "\74"; } /* "t" */
+.icon-up-dir:before{ content: "\25b2"; } /* "▲" */
+.icon-down-dir:before{ content: "\25bc"; } /* "▼" */
+.icon-star:before{ content: "\2605"; } /* "★" */
+.icon-check-off:before{ content: "\2610"; } /* "☐" */
+.icon-check-on:before{ content: "\2611"; } /* "☑" */
+.icon-calendar:before{ content: "\e800"; } /* "" */
+.icon-plus:before{ content: "\e801"; } /* "" */
+.icon-minus:before{ content: "\e802"; } /* "" */
+.icon-youtube:before{ content: "\f39e"; } /* "" */
 
 body{
-    font-family: "PT Sans", "Arial", sans-serif;
-    font-size: 14px;
-    color: black;
-    line-height: 17px;
-    font-weight: normal;
-    text-transform: uppercase;
     position: relative;
     min-width: 1200px;
     background-color: #f2f2f2;
+    color: black;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 14px;
+    font-family: "PT Sans", "Arial", sans-serif;
+    line-height: 17px;
+}
+
+main{
+    position: relative;
 }
 
 h3{
-    font-family: "PT Sans", "Arial", sans-serif;
-    font-size: 21px;
-    font-weight: bold;
-    line-height: 25px;
     text-transform: uppercase;
+    font-weight: bold;
+    font-size: 21px;
+    font-family: "PT Sans", "Arial", sans-serif;
+    line-height: 25px;
 }
 
 .main_shadow{
-    width: 1200px;
-    margin-left: auto;
     margin-right: auto;
-    box-shadow: 0px 0px 15px -1px rgba(0, 1, 1, 0.3);
+    margin-left: auto;
+    max-width: 1200px;
     background-color: #ffffff;    
+    box-shadow: 0px 0px 15px -1px rgba(0, 1, 1, 0.3);
 }
 
 .clearfix::after{
-    content: '';
     display: table;
     clear: both;
+    content: "";
 }
 
 .main_menu ul{
     margin: 0;
-    list-style: none;
     padding: 0;
+    list-style: none;
     font-size: 0;
 }
 
 .main_menu li{
     display: inline-block;
-    vertical-align: top;  
     width: 20%;
-    
+    vertical-align: top;  
 }
 
 .main_menu a{
     display: block;
     padding: 20px 0;
     padding-left: 72px;
-    font-size: 14px;
-    line-height: 15px;
-    font-weight: bold;
     color: black;
     text-decoration: none;    
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 15px;
 }
 
 .main_menu .item_map{
@@ -154,57 +129,55 @@ h3{
 }
 
 .main_menu{
-    width: 1200px;
-    margin: 0px auto;
     position: relative;
+    margin: 0px auto;
     min-height: 56px;
+    width: 1200px;
 }
 
 .logo_menu{
     position: absolute;
-    z-index: 2;
-    left: 50%;
     top: 0;
+    left: 50%;
+    z-index: 2;
     margin-left: -69px;
 }
 
-.main_container{
-    margin: 0 auto;
-    width: 1200px;
-    position: relative;
-}
-
 .index_top_promo{
-    width: 1200px;
-    min-height: 724px;
+    position: relative;
     margin: 0;
     padding: 0;
-}
-
-.index_top_img{
+    padding-top: 508px;
+    min-height: 216px;
     width: 1200px;
-    min-height: 508px;
-    background: url("../img/shape.png") 0 451px no-repeat, 
-                #8bbeda url("../img/index-main-img.jpg") 0 -56px no-repeat;
+    background: #8bbeda url("../img/index-main-img.jpg") 0 -56px no-repeat;
 }
 
+.index_top_promo:after{
+    position: absolute;
+    top: 451px;
+    width: 1200px;
+    height: 57px;
+    background-image: url("../img/shape.png");
+    content: "";
+}
 .index_promo_container{
-    text-align: center;
+    padding-top: 60px;
     min-height: 156px;
     background-color: white;
+    text-align: center;
 }
 
 .index_promo_container h1{
-    font-family: "PT Sans", "Arial", sans-serif;
-    font-size: 21px;
-    font-weight: bold;
-    line-height: 25px;
-    text-transform: uppercase;
-    color:black;
     margin: 0;
-    margin-top: 60px;
     margin-bottom: 34px;
     padding: 0;
+    color:black;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 21px;
+    font-family: "PT Sans", "Arial", sans-serif;
+    line-height: 25px;
 }
 
 .index_promo_container p{
@@ -214,16 +187,16 @@ h3{
 }
 
 .container{
-    min-height: 256px;
     margin-top: 0;
     padding: 0;
+    min-height: 256px;
 }
 
 .reason{
     float: left;
-    width: 400px;
-    min-height: 225px;
     padding-top: 31px;
+    min-height: 225px;
+    width: 400px;
     text-align: center;
 }
 
@@ -234,16 +207,18 @@ h3{
 .reason p{
     margin-top: 25px;
 }
+
 .blue{
     background-color: rgb(129, 179, 210);
     color: white;
 }
 
 .gray{
-    background-color: #eeeeee;
     padding-top: 24px;
     min-height: 232px;
+    background-color: #eeeeee;
 }
+
 .img_reason{
     float: left;
     margin: 0;
@@ -251,19 +226,28 @@ h3{
 
 .preference_block{
     float: left;
+    padding-top: 159px;
+    min-height: 171px;
     width: 400px;
-    min-height: 270px;
-    text-align: center;
-    padding-top: 60px;
+    background: #ffffff url("../img/sprites-2.png") no-repeat;
     color: black;
+    text-align: center;
+}
+
+.preference_block:first-child{
+    background-position: -238px -217px;
+}
+
+.preference_block:nth-child(2){
+    background-position: 163px -217px;
 }
 
 .preference_block:last-child{
-    padding-top: 56px;
+    background-position: -584px -217px;
 }
 
 .preference_block h3{
-    margin-top: 23px;
+    margin-top: 0;
     margin-bottom: 22px;
 }
 
@@ -271,130 +255,159 @@ h3{
     line-height: 21px;
 }
 
-
 .container_ask{
-    min-height: 264px;
-    text-align: center;
+    margin-bottom: 0;
     padding-top: 27px;
     padding-bottom: 0;
-    margin-bottom: 0;
+    min-height: 264px;
     background-color: white;
-    
+    text-align: center;
 }
 
 .container_ask h2{
-    font-family: "PT Sans", "Arial", sans-serif;
-    font-size: 30px;
     color: black;
-    font-weight: bold;
-    line-height: 32px;
     text-transform: uppercase;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: "PT Sans", "Arial", sans-serif;
+    line-height: 32px;
 }
 
 .container_ask p{
     margin-top: 28px;
+    color: #333333;
     font-size: 14px;
     line-height: 24px;
-    color: #333333;
 }
 
 .map_block{
-    border: 0;
-    margin-top: 0; /*вот отрицательный маржин у img*/
+    position: relative;
+    margin-top: 0;
     margin-bottom: 0;
-    border: 0;
     padding: 0;
     min-height: 593px;
+    border: 0;
+    border: 0;
+    background-color: greenyellow;
     background-image: url("../img/map.jpg");
 }
 
-
 .search_form{
-    width: 568px;
-    min-height: 341px;
     position: absolute;
-    top: 2113px;
+    top: 0;
     left: 316px;
     padding-top: 54px;
+    min-height: 341px;
+    width: 568px;
     background-color: #ffffff;
-    text-transform: uppercase;
     box-shadow: 0 7px 15px 0px rgba(0, 1, 1, 0.15);
+    text-transform: uppercase;
 }
 
 .off_display{
     display: none;
 }
 
-
 .on_display{
     display: block;
-    animation: on_disp 4s ease-in-out;
+    -webkit-animation: on_disp 4s ease-in-out;
+            animation: on_disp 4s ease-in-out;
+}
+
+@-webkit-keyframes on_disp{
+    0%{
+        -webkit-transform: translateX(-900px);
+                transform: translateX(-900px);  
+    }
+    25%{
+        -webkit-transform: translateX(90px);
+                transform: translateX(90px);
+    }
+    50%{
+        -webkit-transform: translateX(-40px);
+                transform: translateX(-40px);
+    }
+    75%{
+        -webkit-transform: translateX(20px);
+                transform: translateX(20px);
+    }
+    90%{
+        -webkit-transform: translateX(-8px);
+                transform: translateX(-8px);
+    }
+    100%{
+        -webkit-transform: translateX(0px);
+                transform: translateX(0px);
+    }
 }
 
 @keyframes on_disp{
     0%{
-        transform: translateX(-900px);  
+        -webkit-transform: translateX(-900px);
+                transform: translateX(-900px);  
     }
     25%{
-        transform: translateX(90px);
+        -webkit-transform: translateX(90px);
+                transform: translateX(90px);
     }
     50%{
-        transform: translateX(-40px);
+        -webkit-transform: translateX(-40px);
+                transform: translateX(-40px);
     }
     75%{
-        transform: translateX(20px);
+        -webkit-transform: translateX(20px);
+                transform: translateX(20px);
     }
     90%{
-        transform: translateX(-8px);
+        -webkit-transform: translateX(-8px);
+                transform: translateX(-8px);
     }
     100%{
-        transform: translateX(0px);
+        -webkit-transform: translateX(0px);
+                transform: translateX(0px);
     }
-    
 }
 
-
 .title_form{
-    width: 568px;
-    min-height: 56px;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 45px;
-    text-align: center;
-    background-color: #766357;
+    margin-right: auto;
     margin-bottom: 0px;
+    margin-left: auto;
+    min-height: 56px;
+    width: 568px;
+    background-color: #766357;
+    text-align: center;
 }
 
 .title_form a{
-    padding-top: 30px;
     display: block;
+    padding-top: 30px;
     min-height: 56px;
-    text-decoration: none;
     color: white;
+    text-decoration: none;
 }
 
 .search_form input[name="date_in"], [name="date_out"]{
-    font-size: 14px;
-    line-height: 26px;
+    margin-right: 40px;
+    margin-bottom: 27px;
+    padding-left:14px;
+    min-height: 38px;
+    width: 332px;
+    border: none;
+    background-color: #f2f2f2;
+    background-image: url("../img/sprites-2.png");
+    background-position: 316px 9px;
+    background-repeat: no-repeat;
     color: black;
     text-transform: uppercase;
     font-weight: bold;
-    border: none;
-    margin-bottom: 27px;
-    margin-right: 40px;
-    padding-left:14px;
-    width: 332px;
-    min-height: 38px;
-    
-    background-image: url("../img/sprites-2.png");
-    background-repeat: no-repeat;
-    background-position: 316px 9px;
-    background-color: #f2f2f2;
+    font-size: 14px;
+    line-height: 26px;
 }
 
 .search_form input[name="date_out"]{
-    padding-left: 11px;
     margin-bottom: 29px;
+    padding-left: 11px;
 }
 
 .search_form input[name="date_in"]:hover, [name="date_out"]:hover{
@@ -403,11 +416,12 @@ h3{
 }
 
 .search_form input[name="date_in"]:active, [name="date_out"]:active{
-    background-color: white;
-    border: 2px solid #e5e5e5;
-    width: 330px;
-    min-height: 34px;
     padding-left:12px;
+    min-height: 34px;
+    width: 330px;
+    outline: none;
+    border: 2px solid #e5e5e5;
+    background-color: white;
     background-position: -186px -69px;
 }
 
@@ -416,33 +430,31 @@ h3{
 }
 
 .search_form label{
-    font-size: 14px;
     color: black;
     font-weight: bold;
+    font-size: 14px;
 }
 
 .search_form label[for="date_in"]{
-    margin-left: 57px;
     margin-right: 16px;
+    margin-left: 57px;
 }
 
 .search_form label[for="date_out"]{
-    margin-left: 55px;
     margin-right: 16px;
+    margin-left: 55px;
 }
 
-
 .search_form input[type="submit"]{
-    width: 458px;
-    height: 58px;
     margin-top: 53px;
     margin-left: 55px;
-    
-    font-size: 21px;
-    font-weight: bold;
-    color: white;
-    background-color: #81b3d2;
+    width: 458px;
+    height: 58px;
     border: none;
+    background-color: #81b3d2;
+    color: white;
+    font-weight: bold;
+    font-size: 21px;
 }
 
 .search_form input[type="submit"]:hover{
@@ -450,72 +462,74 @@ h3{
 }
 
 .search_form input[type="submit"]:active{
+    outline: none;
     background-color: #5496bd;
     color: rgba(255, 255, 255, 0.3);
 }
 
-
 .search_form label[for="count_adult"]{
-    margin-left: 55px;
     margin-right: 41px;
+    margin-left: 55px;
 }
 
 input[name="count_adult"]{
+    margin: 0;
+    padding: 0;
     width: 38px;
     height: 38px;
-    padding: 0;
-    margin: 0;
     border: 0;
-    font-family: "PT Sans", "Arial", sans-serif;
-    font-weight: bold;
-    font-size: 14px;
     background-color: #f2f2f2;
     text-align: center; 
+    font-weight: bold;
+    font-size: 14px;
+    font-family: "PT Sans", "Arial", sans-serif;
 }
 
 .search_form label[for="count_kids"]{
-    margin-left: 53px;
     margin-right: 27px;
+    margin-left: 53px;
 }
 
 input[name="count_kids"]{
+    margin: 0;
+    padding: 0;
     width: 38px;
     height: 38px;
-    padding: 0;
-    margin: 0;
     border: 0;
-    font-family: "PT Sans", "Arial", sans-serif;
-    font-weight: bold;
-    font-size: 14px;
     background-color: #f2f2f2;
     text-align: center; 
+    font-weight: bold;
+    font-size: 14px;
+    font-family: "PT Sans", "Arial", sans-serif;
 }
+
 .count_people{
     font-size: 0;
 }
+
 .sign_btn:before{
     display: inline-block;
-    content: "\e802";
-    vertical-align: top;
-    font-family: "symbols-sedona";
-    font-size: 14px;
-    color:  #a9a9a9;
-    background-color: #f2f2f2;
     padding: 12px;
     padding-left: 13px;
-    height: 14px;
     width: 13px;
+    height: 14px;
+    background-color: #f2f2f2;
+    color:  #a9a9a9;
+    content: "\e802";
+    vertical-align: top;
+    font-size: 14px;
+    font-family: "symbols-sedona";
     cursor: pointer;
 }
 
 .plus_adult_btn:before{
-    font-family: "symbols-sedona";
     content: "\e801";
+    font-family: "symbols-sedona";
 }
 
 .plus_kid_btn:before{
-    font-family: "symbols-sedona";
     content: "\e801";
+    font-family: "symbols-sedona";
 }
 
 .sign_btn:hover:before{
@@ -526,62 +540,76 @@ input[name="count_kids"]{
     color: #81b3d2;
 }
 
-
-
-
-
-/*                      -------------Sedona hotels-------------                    */
-
 .select_form{
-    min-height: 196px;
-    background-image: url("../img/filter_background.jpg");
-    background-position: 0 -56px;
     margin-top: 0px;
     padding-top: 21px;
+    min-height: 196px;
     background-color: #6c92b9;
+    background-image: url("../img/filter_background.jpg");
+    background-position: 0 -56px;
 }
 
 .select_form input[type="checkbox"]{
     display: none;
 }
+
 .select_infrastr{
     float: left;
     margin-left: 71px;
+    padding-top: 6px;
+    padding-left: 1px;
+    min-height: 160px;
     width: 155px;
+    color: white;
+}
+
+.select_house{
+    float: left;
+    margin-left: 100px;
     padding-top: 6px;
     min-height: 160px;
+    width: 155px;
     color: white;
+}
+
+.select_house input[type="checkbox"] + label:before{
+    margin-left: 1px;
+}
+
+.select_price{
+    float: right;
+    margin-right: 45px;
+    padding-top: 6px;
+    min-height: 160px;
+    width: 355px;
 }
 
 .select_form input[type="checkbox"] + label{
     display: inline-block;
     margin-top: 4px;
     margin-bottom: 20px;
+    vertical-align: middle;
     line-height: 21px;
     cursor: pointer;
-    vertical-align: middle;
 }
 
-
 .select_form input[type="checkbox"] + label:before{
-    content: '\2610';
-    font-family: 'symbols-sedona'; 
-    display: :inline-block;
-    vertical-align: middle;
+    display:inline-block;
     margin-right: 19px;
-    margin-left: 1px;
-    font-size: 26px;
     color: #b5b5b5;
+    content: "\2610";
+    vertical-align: middle;
+    font-size: 26px;
+    font-family: "symbols-sedona"; 
 }
 
 .select_form input[type="checkbox"]:checked + label:before{
-    content: '\2611';
-    font-family: 'symbols-sedona';
-    font-size: 26px;
-    margin-right: 15px;
+    margin-right: 0.588em;
     color: #b5b5b5;
+    content: "\2611";
+    font-size: 26px;
+    font-family: "symbols-sedona";
 }
-
 
 .select_form input[type="checkbox"] + label:hover:before{
     color: #fefefe;
@@ -591,29 +619,11 @@ input[name="count_kids"]{
     color: #6a6a6a;
 }
 
-
-.select_house{
-    float: left;
-    margin-left: 101px;
-    width: 155px;
-    padding-top: 6px;
-    min-height: 160px;
-    color: white;
-}
-
-.select_price{
-    float: right;
-    margin-right: 45px;
-    width: 355px;
-    padding-top: 6px;
-    min-height: 160px;
-}
-
 .select_form h4{
     margin-top: 0px;
     color: white;
-    font-size: 16px;
     font-weight: bold;
+    font-size: 16px;
     line-height: 21px;    
 }
 
@@ -623,25 +633,25 @@ input[name="count_kids"]{
 
 .select_price .range{
     position: relative;
-    width: 314px;
-    height: 24px;
-    border: 2px #ffffff solid;
-    border-radius: 2px;
     margin-top: 0;
     margin-bottom: 7px;
     margin-left: 10px;
     padding: 0;
-    padding-top: 8px;
+    padding-top: 6px;
+    width: 314px;
+    height: 26px;
+    border: 2px #ffffff solid;
+    border-radius: 2px;
     color: white;
 }
 
 .range .vertical_line{
     position: absolute;
+    top: 5px;
+    left: 157px;
     width: 0;
     height: 20px;
     border: 1px #ffffff solid;
-    left: 157px;
-    top: 5px;
 }
 
 .range .from{
@@ -649,17 +659,17 @@ input[name="count_kids"]{
 }
 
 .range .do{
-    margin-left: 114px;
+    margin-left: 82px;
 }
 
 .range_controls{
     position: relative;
-    width: 308px;
-    height: 15px;
-    margin-left: 10px;
     margin-bottom: 19px;
+    margin-left: 10px;
     padding-top: 13px;
     padding-left: 10px;
+    width: 308px;
+    height: 15px;
 }
 
 .range_controls .scale{
@@ -668,10 +678,10 @@ input[name="count_kids"]{
 }
 
 .range_controls .bar{
+    width: 82%;
     height: 2px;
     background-color: white; 
     opacity: 1;
-    width: 82%;
 }
 
 .range_controls .toggle{
@@ -680,8 +690,8 @@ input[name="count_kids"]{
     width: 4px;
     height: 4px;
     border: 8px solid #ffffff;
-    background: #ababab;
     border-radius: 50%;
+    background: #ababab;
     box-shadow: 0 2px 0 0 rgba(0, 1, 1, 0.14);
     cursor: pointer;
 }
@@ -698,58 +708,69 @@ input[name="count_kids"]{
     background-color: #1c4f80;
 }
 
-.select_form input[type="submit"]{
-    height: 36px;
-    width: 137px;
+.select_form input[type="text"]{
+    margin: 0;
+    width: 40px;
+    border: none;
     background: none;
-    border: 2px #ffffff solid;
-    text-transform: uppercase;
-    color: white;
-    border-radius: 2px;
+}
+
+.select_form input[type="submit"]{
     margin-left: 95px;
     padding-left: 8px;
+    width: 137px;
+    height: 36px;
+    outline: none;
+    border: 2px #ffffff solid;
+    border-radius: 2px;
+    background: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.select_form input[type="submit"]:active{
+    outline: none;
 }
 
 
 .container_sort{
+    padding-top: 30px;
     min-height: 56px;
     border-bottom: 1px solid #e5e5e5;
-    padding-top: 30px;
 }
 
 .container_sort h2{
-    font-family: "PT Sans", "Arial", sans-serif;
-    font-size: 21px;
-    font-weight: bold;
-    line-height: 26px;
     float: left;
     margin: 0;
-    margin-left: 72px;
     margin-right: 47px;
-    
+    margin-left: 72px;
+    font-weight: bold;
+    font-size: 21px;
+    font-family: "PT Sans", "Arial", sans-serif;
+    line-height: 26px;
 }
 
 .container_sort .sorting{
     display: block;
     float: left;
-    font-size: 12px;
-    font-weight: normal;
-    line-height: 18px; 
     margin-top: 6px;
     margin-right: 40px;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px; 
 }
 
 .container_sort .sort_item{
     display: block;
     float: left;
-    font-size: 12px;
-    font-weight: normal;
-    line-height: 15px; 
     margin-top: 7px;
-    text-decoration: none;
-    color: #b1b1b1;
     margin-right: 33px;
-    border-bottom: 1px dotted #81b3d2
+    border-bottom: 1px dotted #81b3d2;
+    color: #b1b1b1;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px; 
 }
 
 .container_sort .sort_item:hover{
@@ -757,41 +778,41 @@ input[name="count_kids"]{
 }
 
 .container_sort .sort_item:active{
-    color: black;
     border-bottom: none;
+    color: black;
 }
 
 .container_sort .active{
-    color: #81b3d2;
     border-bottom: none;
+    color: #81b3d2;
 }
 
 .container_sort .sort_bottom{
     display: block;
-    border: 10px solid #cccccc;
-    width: 0;
-    height: 0;
-    border-top: 0;
-    border-left-color: transparent;
-    border-right-color: transparent;
-    transform: scaleX(0.5);
     float: right;
     margin-top: 10px;
     margin-right: 3px;
+    width: 0;
+    height: 0;
+    border: 10px solid #cccccc;
+    border-top: 0;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    transform: scaleX(0.5);
 }
 
 .container_sort .sort_top{
     display: block;
-    border: 10px solid #cccccc;
-    width: 0;
-    height: 0;
-    border-bottom: 0;
-    border-left-color: transparent;
-    border-right-color: transparent;
-    transform: scaleX(0.5);
     float: right;
     margin-top: 9px;
     margin-right: 68px;
+    width: 0;
+    height: 0;
+    border: 10px solid #cccccc;
+    border-right-color: transparent;
+    border-bottom: 0;
+    border-left-color: transparent;
+    transform: scaleX(0.5);
 }
 
 .container_sort .bt_active{
@@ -800,42 +821,42 @@ input[name="count_kids"]{
 }
 
 .sort_top:hover, .sort_bottom:hover{
-    border-bottom-color: #000000;
     border-top-color: #000000;
+    border-bottom-color: #000000;
 }
 
 .sort_top:active, .sort_bottom:active{
-    border-bottom-color: #81b3d2;
     border-top-color: #81b3d2;
+    border-bottom-color: #81b3d2;
 }
 
 .result .container_hotels{
-    min-height: 130px;
-    border-bottom: 1px solid #e5e5e5;
     padding-top: 20px;
     padding-left: 72px;
+    min-height: 130px;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .container_hotels img{
     float: left;
-    margin-right: 30px;
     margin-top: 10px;
+    margin-right: 30px;
 }
 
 .about{
     float: left;
     padding: 0;
-    
+    max-width: 700px;
 }
 
 .about h3{
-    font-family: "PT Sans", "Arial", sans-serif;
-    font-size: 21px;
-    font-weight: bold;
-    line-height: 26px;
     margin: 0;
     margin-top: 5px;
     margin-bottom: 9px;
+    font-weight: bold;
+    font-size: 21px;
+    font-family: "PT Sans", "Arial", sans-serif;
+    line-height: 26px;
     cursor: pointer;
 }
 
@@ -849,9 +870,14 @@ input[name="count_kids"]{
 
 .about .type_house{
     display: inline-block;
-    vertical-align: baseline;
     width: 112px;
-    
+    vertical-align: baseline;
+}
+
+.about .price{
+    display: inline-block; 
+    width: 100px;
+    vertical-align: top;
 }
 
 .about .btn_line{
@@ -859,20 +885,20 @@ input[name="count_kids"]{
 }
 
 .about .btn{
-    text-decoration: none;
-    text-align: center;
-    color: white;
-    font-weight: bold;
     display: block;
     float: left;
     margin-right: 6px;
-    height: 22px;
     padding-top: 6px;
+    height: 22px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .about  .more_btn{
-    background-color: #81b3d2;
     width: 110px;
+    background-color: #81b3d2;
 }
 
 .about  .more_btn:hover{
@@ -882,12 +908,11 @@ input[name="count_kids"]{
 .about  .more_btn:active{
     background-color: #5496bd;
     color: rgba(255, 255, 255, 0.3);
-    
 }
 
 .about  .reserve_btn{
-    background-color: #766357;
     width: 143px;
+    background-color: #766357;
 }
 
 .about  .reserve_btn:hover{
@@ -905,12 +930,12 @@ input[name="count_kids"]{
 }
 
 .rate .stars{
+    margin-top: 5px;
+    margin-bottom: 43px;
     width: 120px;
     height: 25px;
-    margin-top: 5px;
     background-image: url("../img/sprites-2.png");
     background-repeat: no-repeat;
-    margin-bottom: 43px;
 }
 
 .container_hotels:nth-child(1) .stars{
@@ -927,32 +952,25 @@ input[name="count_kids"]{
 
 .rate span{
     display: block;
-    padding: 0;
     margin: 0;
-    width: 111px;
-    font-size: 14px;
-    line-height: 21px;
-    color: #666666;
-    background-color: #f2f2f2;
-    text-align: center;
+    margin-left: 9px;
+    padding: 0;
     padding-top: 3px;
     padding-bottom: 3px;
-    margin-left: 9px;
+    width: 111px;
+    background-color: #f2f2f2;
+    color: #666666;
+    text-align: center;
+    font-size: 14px;
+    line-height: 21px;
 }
 
-
-/*                  -----------------------footer-----------------------                    */
-
-
-
 .main_footer{
+    margin-right: auto;
+    margin-left: auto;
+    min-height: 120px;
     width: 1200px;
     background-color: rgba(255, 255, 255, 0.9);
-    min-height: 120px;
-    margin-left: auto;
-    margin-right: auto;
-    /*box-shadow: 0 5px 15px rgba(0,1,1, 0.2);*/
-    
 }
 
 .abs_pos{
@@ -964,38 +982,37 @@ input[name="count_kids"]{
 }
 
 .hashtag{
-    min-height: 73px;
     float: left;
-    width: 240px;
-    margin-left: 80px;
-    text-align: center;
-    padding-top: 47px;
     margin-right: 204px;
+    margin-left: 80px;
+    padding-top: 47px;
+    min-height: 73px;
+    width: 240px;
+    text-align: center;
 }
 
 .hashtag span{
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
     font-size: 21px;
     font-family: "PT Sans", "Arial", sans-serif;
-    font-weight: bold;
     line-height: 23px;
-    text-transform: uppercase;
-    color: black;
 }
 
 .footer_social{
     float: left;
-    width: 151px;
-    min-height: 84px;
     padding-top: 36px;
-
+    min-height: 84px;
+    width: 151px;
 }
 
 .social_btn{
     display: block;
-    width: 46px;
-    min-height: 48px;
     float: left;
     margin-right: 6px;
+    min-height: 48px;
+    width: 46px;
     background-color: #81b3d2;
     background-image: url("../img/sprites.png");
 }
@@ -1013,8 +1030,8 @@ input[name="count_kids"]{
 }
 
 .social_btn_fb{
-    background-position: 19px -187px;
     width: 47px;
+    background-position: 19px -187px;
 }
 
 .social_btn_fb:active{
@@ -1029,7 +1046,6 @@ input[name="count_kids"]{
     background-position: -87px -85px;
 }
 
-
 .social_btn:hover{
     background-color: #669ec0;
 }
@@ -1039,30 +1055,30 @@ input[name="count_kids"]{
 }
 
 .footer_copyright{
-    width: 225px;
+    position: relative;
     float: right;
     margin-right: 72px;
-    min-height: 69px;
     padding-top: 51px;
     padding-left: 16px;
-    position: relative;
-    font-family: "PT Sans", "Arial", sans-serif;
-    font-size: 14px;
+    min-height: 69px;
+    width: 225px;
     color: black;
-    line-height: 16px;
-    font-weight: normal;
     text-transform: uppercase;
+    font-weight: normal;
+    font-size: 14px;
+    font-family: "PT Sans", "Arial", sans-serif;
+    line-height: 16px;
 }
 
 .footer_copyright a{
-    display: block;
     position: absolute;
-    width: 113px;
-    min-height: 39px;
-    background-image: url("../img/sprites.png");
-    background-position: 0 -352px;
     top: 41px;
     left: 97px;
+    display: block;
+    min-height: 39px;
+    width: 113px;
+    background-image: url("../img/sprites.png");
+    background-position: 0 -352px;
 }
 
 .footer_copyright a:hover{
@@ -1072,13 +1088,3 @@ input[name="count_kids"]{
 .footer_copyright a:active{
     background-position: -159px -416px;  
 }
-
-
-
-
-
-
-
-
-
-
